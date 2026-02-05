@@ -431,15 +431,14 @@ div.for-flex {
   }
 img {
   margin: 25px 10px 10px 10px;
-  border: 2px solid #000484c2;
+  border: 2px solid transparent;
   border-radius: 30px;
-  box-shadow: 0px 0px 15px 3px #0004848e;
+  filter: drop-shadow(0 0 50px #0004848e);
   width: 300px;
   transition: 100ms;
 }
 img:hover {
   border: 2px solid transparent;
-  box-shadow: 0px 0px 15px 3px transparent;
   transform: scale(1.1);
 }
 .booking-btn {
