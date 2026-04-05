@@ -1,0 +1,636 @@
+/* Imported fonts from Google */
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
+
+@font-face {
+    font-family: 'GE-SS-Two-Bold_ar';
+    src: url('/css/fonts/fonts/GE-SS-Two-ar/GE-SS-Two-Bold-ar.otf');
+}
+@font-face {
+    font-family: 'GE-SS-Two-Light_ar';
+    src: url('/css/fonts/fonts/GE-SS-Two-ar/GE-SS-Two-Light-ar.otf');
+}
+@font-face {
+    font-family: 'Nunito-Black';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Black.ttf');
+}
+@font-face {
+    font-family: 'Nunito-Bold';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Bold.ttf');
+}
+@font-face {
+    font-family: 'Nunito-ExtraBold';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-ExtraBold.ttf');
+}
+@font-face {
+    font-family: 'Nunito-ExtraLight';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-ExtraLight.ttf');
+}
+@font-face {
+    font-family: 'Nunito-Light';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Light.ttf');
+}
+@font-face {
+    font-family: 'Nunito-Regular';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Regular.ttf');
+}
+@font-face {
+    font-family: 'Nunito-SemiBold';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-SemiBold.ttf');
+}
+@font-face {
+    font-family: 'Nunito-Thin';
+    src: url('/css/fonts/fonts/Nunito-en/Nunito-Thin.ttf');
+}
+
+/*  CSS for index.html */
+
+html {
+  font-family: "Handlee", cursive;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0px -135px;
+  position: relative;
+  animation: body 1s ease;
+}
+body::before {
+  content: "";
+  backdrop-filter: blur(2px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00008b1a;
+  transition: all 1s ease;
+  z-index: -1;
+}
+header {
+  margin: 0;
+  padding: 10px 0 20px;
+  background-color: #00048434;
+  backdrop-filter: blur(50px);
+  overflow: hidden;
+  transition: 50ms;
+}
+div.header-container {
+  display: grid;
+  place-items: center;
+  align-items: center;
+  justify-items: space-between;
+  transform: scaleX(1.1);
+}
+#menu-btn {
+  display: none;
+}
+#header-menu {
+  display: flex;
+  background-color: #9a9aff67;
+  padding: 15px;
+  border-radius: 10px;
+  gap: 30px;
+  list-style: none;
+  transition: 250ms;
+}
+.my-link {  /* it will be the same */
+  padding: 10px;
+  float: left;
+  text-decoration: none;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+  background-color: #001679;
+  backdrop-filter: blur(15px);
+  color: white;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  transition: 100ms;
+}
+.my-link:hover {
+  background-color: #0023be;
+  transform: translateY(-5px);
+}
+.my-link.clicked {
+  background-color: #000b3b;
+  color: #00b7ff;
+  transform: translateY(-3px) scale(0.5);
+  transition: 100ms;
+}
+input.search {
+  margin: auto auto auto auto;
+  padding: 10px;
+  background-color: #b4b4ff;
+  width: 350px;
+  height: 50px;
+  border: 0px solid transparent;
+  border-radius: 30px;
+  transition: 250ms;
+  box-shadow: 0px 0px 5px 2px #0f0d69;
+}
+input.search:hover {
+  background-color: #d0d0ff;
+  transition: 150ms;
+  box-shadow: 0px 0px 10px 5px #0f0d69;
+}
+input.search:focus {
+  outline: 2px solid blue;
+}
+header button#go-below-btn {
+  position: absolute;
+  top: 180px;
+  right: 20px;
+  background-color: #d1f2ffc2;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 blue inset,
+    0 0 10px 0 blue;
+  font-size: xx-large;
+  width: 50px;
+  height: 50px;
+  transition: all 50ms ease;
+}
+header button#go-below-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 0 blue inset,
+    0 0 35px 0 blue;
+  cursor: pointer;
+}
+
+/* finish header
+-------------------------------------------------------------------------------------------------------
+Popup styles
+*/
+div#Feedback-Popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #00000080;
+  z-index: 2;
+}
+div#Feedback-Content {
+  margin: auto;
+  padding: 15px 35px;
+  position: relative;
+  background-color: #e3e3ff44;
+  backdrop-filter: blur(10px);
+  border: 3px solid #00004d2f;
+  border-radius: 50px;
+  width: auto;
+  height: 485px;
+  animation: Feedback-Content_toDown 500ms ease;
+  overflow: scroll;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+button#close-feedback {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  font-size: 25px;
+  background-color: #ff000033;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  transition: 150ms;
+}
+button#close-feedback:hover {
+  background-color: red;
+}
+h1#feedback {
+  text-align: center;
+  text-shadow: 0px 0px 5px blue;
+  font-weight:bolder;
+}
+form#feedback {
+  display: grid;
+  font-weight: bold;
+  text-shadow: 0px 0px 1px blue;
+}
+div.div-for-form {
+  display: grid;
+}
+div.first-and-last-name {
+  display: flex;
+  margin: 0px auto 10px auto;
+  gap: 10px;
+}
+div.row {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+div.row input,
+input[type="email"],
+input[type="tel"] {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+}
+div.row input:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+  border: 2px solid blue;
+  border-radius: 10px;
+  outline: none;
+}
+hr.feedback-hr {
+  width: 100%;
+}
+h4.provide-feedback {
+  text-decoration: underline;
+}
+div.feedback-choose ul {
+  margin: 0px auto 20px auto;
+  padding: 8px;
+  background-color: #00000050;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+button#feedback-submit {
+  margin: 0 auto;
+  padding: 10px;
+  font-weight: 600;
+  width: 100px;
+  text-align: center;
+  background-color: #001679;
+  color: white;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  transition: 100ms;
+}
+button#feedback-submit:hover {
+  background-color: #0023be;
+  box-shadow: 0px 0px 5px 0px black;
+}
+/* finish all popups of header
+-------------------------------------------------------------------------------------------------------
+nav styles
+*/
+
+nav {
+  margin: 0;
+  padding: 10px 0 0 0;
+  backdrop-filter: blur(50px);
+  background-color: #0016a449;
+  position: sticky;
+  top: -114px;
+  z-index: 1;
+}
+nav h2#h2-of-nav {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+nav div {
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+}
+nav div ul {
+  margin: 0px 100px;
+  padding: 20px;
+  background-color: #ffffff40;
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  text-transform: capitalize;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  transition: 250ms;
+}
+nav div  ul li {
+  margin: auto;
+  padding: 10px;
+  background-color: #ffffff40;
+  backdrop-filter: blur(3px);
+  color: black;
+  box-shadow: 0px 0px 5px 0px black;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  width: 150px;
+  transition: 1000ms;
+}
+nav div ul li:hover {
+  background-color: #d1f2ffc2;
+  color: #ae006c;
+  box-shadow: 0px 0px 5px 2px blue;
+  cursor: pointer;
+  transition: 150ms;
+}
+nav button#go-above-btn {
+  position: absolute;
+  top: 130px;
+  left: 40px;
+  background-color: #d1f2ffc2;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 blue inset,
+                      0 0 10px 0 blue;
+  font-size: xx-large;
+  width: 50px;
+  height: 50px;
+  transition: all 50ms ease;
+}
+nav button#go-above-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 0 blue inset,
+      0 0 35px 0 blue;
+  cursor: pointer;
+}
+
+/* finish nav
+-------------------------------------------------------------------------------------------------------
+section styles
+*/
+section {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+}
+#luxury, #suv,
+#sport, #trucks, #modern {
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(50px);
+  background-color: #0016a449;
+  display: grid;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+}
+div.right-h1-left {
+  margin: 0 auto;
+  position: sticky;
+  top: 80px;
+  z-index: 1;
+}
+h1#h1-car-types {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #001284da;
+  backdrop-filter: blur(50px);
+  color: beige;
+  border-radius: 25px;
+  font-style: oblique;
+  text-decoration: underline;
+  text-transform: capitalize;
+  text-align: center;
+  width: 750px;
+  height: 30px;
+  z-index: 1;
+}
+button#right-btn,
+button#left-btn {
+  background-color: #d1f2ffc2;
+  border: 0px solid transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 0 blue inset,
+                      0 0 10px 0 blue;
+  font-size: xx-large;
+  width: 50px;
+  height: 50px;
+  transition: all 50ms ease;
+  z-index: 1;
+}
+button#right-btn {
+  position: absolute;
+  top: 10px;
+  left: 700px;
+}
+button#left-btn {
+  position: absolute;
+  top: 10px;
+  right: 700px;
+}
+button#right-btn:hover,
+button#left-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px 0 blue inset,
+    0 0 35px 0 blue;
+  cursor: pointer;
+}
+div.for-flex {
+  margin-bottom: 20px;
+  padding: 35px 10px 0 10px;
+  display: flex;
+  overflow: auto;
+  scrollbar-color: #333 transparent;
+  gap: 30px;
+}
+#car {
+  margin: auto auto 20px auto;
+  padding: 15px;
+  background-color: #cacacac7;
+  border: 3px solid darkblue;
+  border-radius: 30px;
+  display: grid;
+  text-align: center;
+  border-radius: 35px;
+  position: relative;
+  /* .car:hover after .carmodel */
+}
+.brand {
+  margin: 15px;
+  font-size: 30px;
+  font-weight: bolder;
+  color: black;
+  transition: 1000ms;
+}
+.carmodel {
+  margin: 0px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #3e3e3e;
+  transition: 1000ms;
+}
+#car:hover .brand {
+    color: #cf0399;
+    transition: 100ms;
+}
+#car:hover .carmodel {
+    color: #b55f04;
+    transition: 100ms;
+  }
+img {
+  margin: 25px 10px 10px 10px;
+  border: 2px solid transparent;
+  border-radius: 30px;
+  filter: drop-shadow(0 0 50px #0004848e);
+  width: 300px;
+  transition: 100ms;
+}
+img:hover {
+  border: 2px solid transparent;
+  transform: scale(1.1);
+}
+.booking-btn {
+  margin: 10px auto;
+  font-weight: 600;
+  width: 150px;
+  padding: 10px;
+  float: left;
+  text-decoration: none;
+  text-align: center;
+  background-color: #001679;
+  backdrop-filter: blur(15px);
+  color: white;
+  border: 0px solid transparent;
+  border-radius: 5px;
+  transition: 100ms;
+}
+.booking-btn:hover {
+  background-color: #0023be;
+  color: #c2fffd;
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+.booking-btn.clicked {
+  background-color: #00146c;
+  color: #6efffa;
+  transform: translateY(-3px) scale(0.6);
+  /* transition: 250ms; */
+}
+/* End of Section
+-------------------------------------------------------------------------------------------------------
+Popup styles */
+
+div#booking-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #00000080;
+  z-index: 2;
+}
+div#booking-modal-content {
+  margin: auto;
+  padding: 15px 35px;
+  position: relative;
+  background-color: #e3e3ffa8;
+  backdrop-filter: blur(10px);
+  border: 3px solid #00004d2f;
+  border-radius: 50px;
+  height: 500px;
+  animation: Feedback-Content_toDown 200ms ease;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  scrollbar-color: black transparent;
+}
+button#close-booking-modal {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+  font-size: 25px;
+  background-color: #ff000033;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  width: 30px;
+  height: 30px;
+  transition: 150ms;
+}
+button#close-booking-modal:hover {
+  background-color: red;
+}
+h1#booking-info {
+  text-align: center;
+  text-decoration: overline;
+  text-shadow: 0px 0px 5px blue;
+  font-weight:bolder;
+}
+form#booking-form {
+  display: grid;
+  font-weight: bold;
+  text-shadow: 0px 0px 1px blue;
+  label {
+    margin: 10px 0px 0px 15px;
+    padding: 0px 0px 0px 0px;
+    font-size: larger;
+    width: max-content;
+  }
+  input, select {
+    margin: 0px 0px 0px 0px;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+  }
+  input:hover {
+    border: 2px solid black;
+    outline: none;
+  }
+  input:focus {
+    border: 2px solid blue;
+  }
+  
+}
+
+/* finish all popups of header
+
+/* Start of Footer */
+footer {
+  background-color: #0004847f;
+  backdrop-filter: blur(50px);
+  padding: 50px 0px;
+  text-align: center;
+  transition: all 100ms ease;
+}
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 100ms;
+}
+.footer-link:hover {
+  transform: scale(1.15);
+  text-decoration: underline;
+}
+.footer-social {
+  margin-bottom: 30px;
+}
+.social-icon {
+  display: inline-block;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 6px;
+  transition: transform 0.3s;
+}
+.social-icon:hover img {
+  transform: scale(1.2);
+}
+.footer-copy {
+  color: #e0e0e0;
+  font-size: 16px;
+}
