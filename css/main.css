@@ -18,7 +18,6 @@ body {
 }
 body::before {
   content: "";
-  backdrop-filter: blur(2px);
   position: absolute;
   top: 0;
   left: 0;
@@ -32,7 +31,6 @@ header {
   margin: 0;
   padding: 10px 0 20px;
   background-color: #00048434;
-  backdrop-filter: blur(50px);
   overflow: hidden;
   transition: 50ms;
 }
@@ -63,7 +61,6 @@ div.header-container {
   width: 100px;
   text-align: center;
   background-color: #001679;
-  backdrop-filter: blur(15px);
   color: white;
   border: 0px solid transparent;
   border-radius: 5px;
@@ -138,7 +135,6 @@ div#Feedback-Content {
   padding: 15px 35px;
   position: relative;
   background-color: #e3e3ff44;
-  backdrop-filter: blur(10px);
   border: 3px solid #00004d2f;
   border-radius: 50px;
   width: auto;
@@ -240,7 +236,6 @@ nav styles
 nav {
   margin: 0;
   padding: 10px 0 0 0;
-  backdrop-filter: blur(50px);
   background-color: #0016a449;
   position: sticky;
   top: -114px;
@@ -261,7 +256,6 @@ nav div ul {
   margin: 0px 100px;
   padding: 20px;
   background-color: #ffffff40;
-  backdrop-filter: blur(10px);
   border-radius: 15px;
   text-transform: capitalize;
   list-style: none;
@@ -275,7 +269,6 @@ nav div  ul li {
   margin: auto;
   padding: 10px;
   background-color: #ffffff40;
-  backdrop-filter: blur(3px);
   color: black;
   box-shadow: 0px 0px 5px 0px black;
   border: 0px solid transparent;
@@ -329,7 +322,6 @@ section {
 #sport, #trucks, #modern {
   margin: 0;
   padding: 0;
-  backdrop-filter: blur(50px);
   background-color: #0016a449;
   display: grid;
   flex-wrap: wrap;
@@ -346,7 +338,6 @@ h1#h1-car-types {
   margin: 0 auto;
   padding: 20px;
   background-color: #001284da;
-  backdrop-filter: blur(50px);
   color: beige;
   border-radius: 25px;
   font-style: oblique;
@@ -450,7 +441,6 @@ img:hover {
   text-decoration: none;
   text-align: center;
   background-color: #001679;
-  backdrop-filter: blur(15px);
   color: white;
   border: 0px solid transparent;
   border-radius: 5px;
@@ -487,7 +477,6 @@ div#booking-modal-content {
   padding: 15px 35px;
   position: relative;
   background-color: #e3e3ffa8;
-  backdrop-filter: blur(10px);
   border: 3px solid #00004d2f;
   border-radius: 50px;
   height: 500px;
@@ -548,7 +537,6 @@ form#booking-form {
 /* Start of Footer */
 footer {
   background-color: #0004847f;
-  backdrop-filter: blur(50px);
   padding: 50px 0px;
   text-align: center;
   transition: all 100ms ease;
