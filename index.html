@@ -6,36 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The best car rental company in Egypt">
     <title>The best car rental company in Egypt</title>
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap/bootstrap-icons.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/keyframes.css">
+    <link rel="stylesheet" href="css/animations.css">
     <link rel="icon" href="attachments/wallpapers/page-logo.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
-<body background="attachments/wallpapers/background-lightmode.jpg">
+<body id="Home">
+
     <!-- The start of header of the index -->
-    <header id="header">
-        <div class="header-container">
+    <header>
+        <div class="container">
+
             <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
-            <button id="menu-btn" onclick="openMenu()">Menu ☰</button>
-            <ul id="header-menu">
-                <li><a href="html/about.html"     class="my-link" id="delayed-link" target="_self"           draggable="false" title="Learn more about us">About Us</a></li>
-                <li><a href="html/contact.html"  class="my-link" id="delayed-link" target="_self"           draggable="false" title="Contact us via our Social Media accounts">Contact Us</a></li>
-                <li><a href="index.html"              class="my-link" id="delayed-link"                                   draggable="false" title="Go to home page">Home Page</a></li>
-                <li><a href="html/register.html" class="my-link" id="delayed-link" target="_self"           draggable="false" title="Sign in or create a new account">Sign In</a></li>
-                <li><a href="#feedback"             class="my-link" id="delayed-link"                                   draggable="false" title="Give us your feedback and your experince." onclick="openfeedback()" >Feedback</a></li>
+            <button id="menu-btn">☰</button>
+            <img src="attachments/wallpapers/header-logo.png" alt="">
+            <ul>
+                <li><a href="index.html"              id="delayed-link"                draggable="false" title="Go to home page">Home Page</a></li>
+                <li><a href="html/register.html"      id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Sign In</a></li>
+                <li><a href="html/about.html"         id="delayed-link" target="_self" draggable="false" title="Learn more about us">About Us</a></li>
+                <li><a href="html/contact.html"       id="delayed-link" target="_self" draggable="false" title="Contact us via our Social Media accounts">Contact Us</a></li>
+                <li><a href="#feedback"               id="delayed-link"                draggable="false" title="Give us your feedback and your experince." onclick="openfeedback()" >Feedback</a></li>
+                <li><a href="html/eco-cars.html" id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Eco</a></li>
             </ul>
             <input class="search" type="search" name="Search" placeholder="Search here ..." title="Search for your food here">
-            <br>
-            <a href="html/economic_cars.html" class="my-link">Economic Cars</a>
+            <div class="theme reveal">
+                <i class="bi bi-sun-fill lightMode theme-icon"></i>
+                <i class="bi bi-moon-fill darkMode theme-icon"></i>
+            </div>
         </div>
-        <button id="go-below-btn" onclick="document.getElementById('footer').scrollIntoView({behavior: 'smooth'});">▼</button>
     </header>
     <!-- The end of header of the index -->
     <!-- It appears when click on feedback button (openfeedback()) -->
-    <div id="Feedback-Popup">
-        <div id="Feedback-Content">
-            <button id="close-feedback" onclick="closefeedback()">×</button>
+    <div class="Feedback-Popup">
+        <div class="container">
+            <button class="close" onclick="closefeedback()">&times;</button>
             <h1 id="feedback">Feedback Form</h1>
             <form id="feedback" action="">
                 <div class="div-for-form">
@@ -55,7 +62,7 @@
                     <input type="tel" required>
                 </div>
                 <hr class="feedback-hr">
-                <h4 class="provide-feedback">Please provide your feedback on the quality of our service.</h4>
+                <h4>Please provide your feedback on the quality of our service.</h4>
                 <div class="feedback-choose">
                     <ul type="none">
                         <li><input id="feedback-choose" type="radio" name="choose">Excellent😍</li>
@@ -72,8 +79,7 @@
     <!-- End of openfeedback() -->
     <!-- Start of nav -->
     <nav>
-        <h2 id="h2-of-nav">These are our cars. You can choose your favorite one:<br>
-                                        Also you can choose the type of the car:
+        <h2 id="h2-of-nav">These are our cars. You can choose your favorite one. Also you can choose the type of the car:
         </h2>
         <div>
             <ul id="car-types">
@@ -602,6 +608,6 @@
     </footer>
     <!-- The end of footer of the index -->
     
-    <script src="main.js"></script>
+    <script src="javascript/main.js"></script>
 </body>
 </html>
