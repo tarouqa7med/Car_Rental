@@ -1,17 +1,5 @@
 /*  All keyframes of page  */
 
-@keyframes body {
-    0% {
-        transform: scale(1) translateY(25px);
-        opacity: 0;
-        background: #000057;
-    }
-    100% {
-        transform: scale(1) translateY(0px);
-        opacity: 1.0;
-        background-color: #00008b1a;
-    }
-}
 @keyframes booking-modal-content_toDown {
     0% {
         transform: translateY(-100%);
@@ -19,4 +7,34 @@
     100% {
         transform: translateY(0);
     }
+}
+@keyframes mini-pop-up-feedback {
+    from {
+        opacity: 0;
+        top: 100%;
+    } to {
+        opacity: 1;
+        top: 50%;
+    }
+}
+@keyframes mini-pop-up2-feedback {
+    from {
+        opacity: 1;
+        right: 50%;
+    } to {
+        opacity: 0;
+        right: 150%;
+    }
+}
+
+/* reveal code for all project */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s 0s ease;
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0px);
 }

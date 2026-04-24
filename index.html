@@ -1,613 +1,637 @@
 <!DOCTYPE html>
 <html lang="en" id="home">
-<head>
-    <!-- https://tarouqa7med.github.io/Car_Rental/ -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The best car rental company in Egypt">
-    <title>The best car rental company in Egypt</title>
-    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/bootstrap/bootstrap-icons.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="icon" href="attachments/wallpapers/page-logo.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body id="Home">
+    <head>
+        <!-- https://tarouqa7med.github.io/Car_Rental/ -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="The best car rental company in Egypt">
+        <title>The best car rental company in Egypt</title>
+        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap/bootstrap-icons.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <link rel="icon" href="attachments/wallpapers/page-logo.png">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    </head>
+    <body id="Home">
 
-    <!-- The start of header of the index -->
-    <header>
-        <div class="container">
+        <!-- The start of header of the index -->
+        <header>
+            <div class="container reveal">
 
-            <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
-            <button id="menu-btn">☰</button>
-            <img src="attachments/wallpapers/header-logo.png" alt="">
-            <ul>
-                <li><a href="index.html"              id="delayed-link"                draggable="false" title="Go to home page">Home Page</a></li>
-                <li><a href="html/register.html"      id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Sign In</a></li>
-                <li><a href="html/about.html"         id="delayed-link" target="_self" draggable="false" title="Learn more about us">About Us</a></li>
-                <li><a href="html/contact.html"       id="delayed-link" target="_self" draggable="false" title="Contact us via our Social Media accounts">Contact Us</a></li>
-                <li><a href="#feedback"               id="delayed-link"                draggable="false" title="Give us your feedback and your experince." onclick="openfeedback()" >Feedback</a></li>
-                <li><a href="html/eco-cars.html" id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Eco</a></li>
-            </ul>
-            <input class="search" type="search" name="Search" placeholder="Search here ..." title="Search for your food here">
-            <div class="theme reveal">
-                <i class="bi bi-sun-fill lightMode theme-icon"></i>
-                <i class="bi bi-moon-fill darkMode theme-icon"></i>
+                <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
+                <button id="menu-btn" class="reveal">☰</button>
+                <div>
+                    <img class="reveal car car-on"  src="attachments/wallpapers/header-logo2.png" alt=""  onclick="window.location.href='/index.html'">
+                    <img class="reveal car car-off" src="attachments/wallpapers/header-logo1.png" alt="">
+                </div>
+                <ul>
+                    <li class="reveal"><a href="#Home"              id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Home</a></li>
+                    <li class="reveal"><a href="#About"             id="delayed-link" target="_self" draggable="false" title="Learn more about us">About Us</a></li>
+                    <li class="reveal"><a href="#About"             id="delayed-link" target="_self" draggable="false" title="Learn more about us">About Us</a></li>
+                    <li class="reveal"><a href="html/contact.html"  id="delayed-link" target="_self" draggable="false" title="Contact us via our Social Media accounts">Contact Us</a></li>
+                    <li class="reveal"><a href="#feedback"          id="delayed-link"                draggable="false" title="Give us your feedback and your experince." onclick="openfeedback()" >Feedback</a></li>
+                    <li class="reveal"><a href="html/eco-cars.html" id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Eco</a></li>
+                </ul>
+                <input type="reveal" name="Search" placeholder="Search here ..." title="Search for your food here">
+                <a href="html/register.html" id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Sign In</a>
+                <div class="theme reveal">
+                    <i class="bi bi-sun-fill lightMode theme-icon"></i>
+                    <i class="bi bi-moon-fill darkMode theme-icon"></i>
+                </div>
             </div>
-        </div>
-    </header>
-    <!-- The end of header of the index -->
-    <!-- It appears when click on feedback button (openfeedback()) -->
-    <div class="Feedback-Popup">
-        <div class="container">
-            <button class="close" onclick="closefeedback()">&times;</button>
-            <h1 id="feedback">Feedback Form</h1>
-            <form id="feedback" action="">
-                <div class="div-for-form">
-                    <div class="first-and-last-name">
-                        <div class="row">
-                            <label>First Name:</label>
-                            <input type="text" required>
+        </header>
+        <!-- The end of header of the index -->
+        
+        <!-- It appears when click on feedback button (openfeedback()) -->
+        <div class="Feedback-Popup">
+            <div class="container">
+                <button class="close" onclick="closefeedback()">&times;</button>
+                <h1 id="feedback">Feedback Form</h1>
+                <form id="feedback" action="">
+                    <div class="div-for-form">
+                        <div class="first-and-last-name">
+                            <div class="row">
+                                <label>First Name:</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="row">
+                                <label>Last Name (Optional):</label>
+                                <input type="text">
+                            </div>
                         </div>
-                        <div class="row">
-                            <label>Last Name (Optional):</label>
-                            <input type="text">
-                        </div>
+                        <label>Email:</label>
+                        <input type="email" required>
+                        <label>Mobile number:</label>
+                        <input type="tel" required>
                     </div>
-                    <label>Email:</label>
-                    <input type="email" required>
-                    <label>Mobile number:</label>
-                    <input type="tel" required>
-                </div>
-                <hr class="feedback-hr">
-                <h4>Please provide your feedback on the quality of our service.</h4>
-                <div class="feedback-choose">
-                    <ul type="none">
-                        <li><input id="feedback-choose" type="radio" name="choose">Excellent😍</li>
-                        <li><input id="feedback-choose" type="radio" name="choose">Good😊</li>
-                        <li><input id="feedback-choose" type="radio" name="choose">Neutral🫤</li>
-                        <li><input id="feedback-choose" type="radio" name="choose">Bad😕</li>
-                        <li><input id="feedback-choose" type="radio" name="choose">Angry😠</li>
-                    </ul>
-                </div>                    
-                <button id="feedback-submit" type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-    <!-- End of openfeedback() -->
-    <!-- Start of nav -->
-    <nav>
-        <h2 id="h2-of-nav">These are our cars. You can choose your favorite one. Also you can choose the type of the car:
-        </h2>
-        <div>
-            <ul id="car-types">
-                <li onclick="document.getElementById('luxury').scrollIntoView({behavior: 'smooth'});">Luxury</li>
-                <li onclick="document.getElementById('suv').scrollIntoView({behavior: 'smooth'});">SUV</li>
-                <li onclick="document.getElementById('sport').scrollIntoView({behavior: 'smooth'});">Sport</li>
-                <li onclick="document.getElementById('trucks').scrollIntoView({behavior: 'smooth'});">Trucks</li>
-                <li onclick="document.getElementById('modern').scrollIntoView({behavior: 'smooth'});">Modern</li>
-            </ul>
-        </div>
-        <button id="go-above-btn" onclick="document.getElementById('header').scrollIntoView({behavior: 'smooth'});">▲</button>
-    </nav>
-    <!-- End of nav -->
-    <!-- The start of section of the index -->
-    <section>
-        <!-- Start of Luxury -->
-        <div id="luxury">
-            <div class="right-h1-left">
-                <button id="right-btn">►</button>
-                <h1 id="h1-car-types">Luxury cars section</h1>
-                <button id="left-btn">◀</button>
-            </div>
-            <div class="for-flex">
-                <div id="car">
-                    <h3 class="brand">Rolls-Royce</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/1.png" alt="GLC Coupe 2025">
-                    <p>Price: 1599$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Rolls-Royce</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/2.png" alt="G63 2025">
-                    <p>Price: 1399$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Rolls-Royce</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/3.png" alt="elantra 2022">
-                    <p>Price: 2599$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Bentley</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/4.png" alt="">
-                    <p>Price: 1799$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Bentley</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/5.png" alt="tucon 2023">
-                    <p>Price: 2299$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Cadillac</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/6.png" alt="corolla 2022">
-                    <p>Price: 1299$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">GMC</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/7.png" alt="GLC Coupe 2025">
-                    <p>Price: 1599$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Range-Rover</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/8.png" alt="G63 2025">
-                    <p>Price: 1399$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Toyota</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/9.png" alt="elantra 2022">
-                    <p>Price: 2599$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Lexus</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/10.png" alt="">
-                    <p>Price: 1799$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Lexus</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/11.png" alt="tucon 2023">
-                    <p>Price: 2299$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Maseratti</h3>
-                    <p class="carmodel"></p>
-                    <img src="attachments/luxury/12.png" alt="corolla 2022">
-                    <p>Price: 1299$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
+                    <hr class="feedback-hr">
+                    <h4>Please provide your feedback on the quality of our service.</h4>
+                    <div class="feedback-choose">
+                        <ul type="none">
+                            <li><input id="feedback-choose" type="radio" name="choose">Excellent😍</li>
+                            <li><input id="feedback-choose" type="radio" name="choose">Good😊</li>
+                            <li><input id="feedback-choose" type="radio" name="choose">Neutral🫤</li>
+                            <li><input id="feedback-choose" type="radio" name="choose">Bad😕</li>
+                            <li><input id="feedback-choose" type="radio" name="choose">Angry😠</li>
+                        </ul>
+                    </div>                    
+                    <button id="feedback-submit" type="submit">Submit</button>
+                </form>
             </div>
         </div>
-        <!-- End of luxury -->
-        <!-- Start of SUV -->
-        <div id="suv">
-            <div class="right-h1-left">
-                <button id="right-btn">►</button>
-                <h1 id="h1-car-types">SUV cars section</h1>
-                <button id="left-btn">◀</button>
-            </div>
-            <div class="for-flex">
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">M8 F93 2024</p>
-                    <img src="attachments/SUV/1.png" alt="MG ZS">
-                    <p>Price: 2899$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">M8 F93 2024</p>
-                    <img src="attachments/SUV/2.png" alt="MG ZS">
-                    <p>Price: 2899$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">X3 G01 2023</p>
-                    <img src="attachments/SUV/3.png" alt="MG5">
-                    <p>Price: 1199$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Elantra 2023</p>
-                    <img src="attachments/SUV/4.png" alt="tucson 2008">
-                    <p>Price: 699$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Tucson 2023</p>
-                    <img src="attachments/SUV/5.png" alt="corolla 2022">
-                    <p>Price: 599$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Elantra 2024</p>
-                    <img src="attachments/SUV/6.png" alt="Hummer 2006">
-                    <p>Price: 399$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Elantra 2023</p>
-                    <img src="attachments/SUV/7.png" alt="tucson 2008">
-                    <p>Price: 699$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Tucson 2023</p>
-                    <img src="attachments/SUV/8.png" alt="corolla 2022">
-                    <p>Price: 599$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Elantra 2024</p>
-                    <img src="attachments/SUV/9.png" alt="Hummer 2006">
-                    <p>Price: 399$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-            </div>
-        </div>
-        <!-- End of SUV -->
-        <!-- Start of Sports -->
-        <div id="sport">
-            <div class="right-h1-left">
-                <button id="right-btn">►</button>
-                <h1 id="h1-car-types">Sport cars section</h1>
-                <button id="left-btn">◀</button>
-            </div>
-            <div class="for-flex">
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">M8 F93 2024</p>
-                    <img src="attachments/sports/1.png" alt="MG ZS">
-                    <p>Price: 2899$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">X3 G01 2023</p>
-                    <img src="attachments/sports/2.png" alt="MG5">
-                    <p>Price: 1199$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">M8 F93 2024</p>
-                    <img src="attachments/sports/3.png" alt="MG ZS">
-                    <p>Price: 2899$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">X3 G01 2023</p>
-                    <img src="attachments/sports/4.png" alt="MG5">
-                    <p>Price: 1199$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Elantra 2023</p>
-                    <img src="attachments/sports/5.png" alt="tucson 2008">
-                    <p>Price: 699$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Tucson 2023</p>
-                    <img src="attachments/sports/6.png" alt="corolla 2022">
-                    <p>Price: 599$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">M8 F93 2024</p>
-                    <img src="attachments/sports/7.png" alt="MG ZS">
-                    <p>Price: 2899$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">X3 G01 2023</p>
-                    <img src="attachments/sports/8.png" alt="MG5">
-                    <p>Price: 1199$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">M8 F93 2024</p>
-                    <img src="attachments/sports/9.png" alt="MG ZS">
-                    <p>Price: 2899$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">BMW</h3>
-                    <p class="carmodel">X3 G01 2023</p>
-                    <img src="attachments/sports/10.png" alt="MG5">
-                    <p>Price: 1199$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Elantra 2023</p>
-                    <img src="attachments/sports/11.png" alt="tucson 2008">
-                    <p>Price: 699$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Tucson 2023</p>
-                    <img src="attachments/sports/12.png" alt="corolla 2022">
-                    <p>Price: 599$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-            </div>
-        </div>
-        <!-- End of Sports -->
-        <!-- Start of Trucks -->
-        <div id="trucks">
-            <div class="right-h1-left">
-                <button id="right-btn">►</button>
-                <h1 id="h1-car-types">Truck (4x4) cars section</h1>
-                <button id="left-btn">◀</button>
-            </div>
-            <div class="for-flex">
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">Elantra 2024</p>
-                    <img src="attachments/trucks/1.png" alt="Hummer 2006">
-                    <p>Price: 399$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Kia</h3>
-                    <p class="carmodel">K4 2025</p>
-                    <img src="attachments/trucks/2.png" alt="corolla2000">
-                    <p>Price: 999$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Kia</h3>
-                    <p class="carmodel">Optima 2022</p>
-                    <img src="attachments/trucks/3.png" alt="corolla 2022">
-                    <p>Price: 199$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Kia</h3>
-                    <p class="carmodel">Kona 2023</p>
-                    <img src="attachments/trucks/4.png" alt="Fiat 128">
-                    <p>Price: 299$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Kia</h3>
-                    <p class="carmodel">carnival 2020</p>
-                    <img src="attachments/trucks/5.png" alt="Fiat 128">
-                    <p>Price: 499$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">MG</h3>
-                    <p class="carmodel" dir="ltr">5 2023</p>
-                    <img src="attachments/trucks/6.png" alt="">
-                    <p>Price: 99$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Kia</h3>
-                    <p class="carmodel">Kona 2023</p>
-                    <img src="attachments/trucks/7.png" alt="Fiat 128">
-                    <p>Price: 299$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Kia</h3>
-                    <p class="carmodel">carnival 2020</p>
-                    <img src="attachments/trucks/8.png" alt="Fiat 128">
-                    <p>Price: 499$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">MG</h3>
-                    <p class="carmodel" dir="ltr">5 2023</p>
-                    <img src="attachments/trucks/9.png" alt="">
-                    <p>Price: 99$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-            </div>
-        </div>
-        <!-- End of Trucks -->
-        <!-- Start of Modern cars -->
-        <div id="modern">
-            <div class="right-h1-left">
-                <button id="right-btn">►</button>
-                <h1 id="h1-car-types">Modern cars section</h1>
-                <button id="left-btn">◀</button>
-            </div>
-            <div class="for-flex">
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel" dir="ltr">tucson GDI</p>
-                    <img src="attachments/modern/1.png" alt="">
-                    <p>Price: 99$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel" dir="ltr">Creta</p>
-                    <img src="attachments/modern/2.png" alt="">
-                    <p>Price: 79$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Skoda</h3>
-                    <p class="carmodel">6</p>
-                    <img src="attachments/modern/3.png" alt="">
-                    <p>Price: 59$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">MG</h3>
-                    <p class="carmodel" dir="ltr">ZS</p>
-                    <img src="attachments/modern/4.png" alt="">
-                    <p>Price: 99$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">MG</h3>
-                    <p class="carmodel" dir="ltr">5</p>
-                    <img src="attachments/modern/5.png" alt="">
-                    <p>Price: 79$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">MG</h3>
-                    <p class="carmodel">6</p>
-                    <img src="attachments/modern/6.png" alt="">
-                    <p>Price: 59$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Kia</h3>
-                    <p class="carmodel">K3</p>
-                    <img src="attachments/modern/7.png" alt="">
-                    <p>Price: 99$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Honda</h3>
-                    <p class="carmodel" dir="ltr">civic</p>
-                    <img src="attachments/modern/8.png" alt="">
-                    <p>Price: 79$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Toyota</h3>
-                    <p class="carmodel">camry</p>
-                    <img src="attachments/modern/9.png" alt="">
-                    <p>Price: 59$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Hyundai</h3>
-                    <p class="carmodel">i20</p>
-                    <img src="attachments/modern/10.png" alt="">
-                    <p>Price: 99$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-                <div id="car">
-                    <h3 class="brand">Suzuki</h3>
-                    <p class="carmodel" dir="ltr">swift</p>
-                    <img src="attachments/modern/11.png" alt="">
-                    <p>Price: 79$</p>
-                    <button class="booking-btn">Book Now</button>
-                </div>
-            </div>
-        </div>
-        <!-- End of Modern cars -->
-    </section>
-    <!-- The end of section of the index -->
-    <div id="booking-modal">
-        <div id="booking-modal-content">
-            <button id="close-booking-modal" onclick="closeBookingModal()">×</button>
-            <h1 id="booking-info">Booking Details</h1>
-            <form id="booking-form" action="">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="car-colour">Car Colour:</label>
-                <select name="choose-colour" id="choose-colour">
-                    <option value="white">White</option>
-                    <option value="gray">Gray</option>
-                    <option value="silver">Silver</option>
-                    <option value="brown">Brown</option>
-                    <option value="beige">Beige</option>
-                    <option value="orange">Orange</option>
-                    <option value="purple">Purple</option>
-                    <option value="pink">Pink</option>
-                    <option value="maroon">Maroon</option>
-                    <option value="navy">Navy</option>
-                    <option value="olive">Olive</option>
-                    <option value="teal">Teal</option>
-                    <option value="aqua">Aqua</option>
-                    <option value="lime">Lime</option>
-                    <option value="cyan">Cyan</option>
-                    <option value="magenta">Magenta</option>
-                    <option value="violet">Violet</option>
-                    <option value="gold">Gold</option>
-                    <option value="orchid">Orchid</option>
-                    <option value="crimson">Crimson</option>
-                    <option value="indigo">Indigo</option>
-                    <option value="tan">Tan</option>
-                    <option value="black">Black</option>
-                    <option value="blue">Blue</option>
-                    <option value="red">Red</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="time">Rental period:</label>
-                <select name="rental-period" id="rental-period">
-                    <option value="1">1 Day</option>
-                    <option value="2">2 Days</option>
-                    <option value="3">3 Days</option>
-                    <option value="7">1 Week</option>
-                    <option value="14">2 Weeks</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="365">1 Year</option>
-                </select>
-                <h3 id="booking-question">Do you want to get the car by delivery to your home?</h3>
-                <input type="checkbox" id="delivery" name="delivery">
-                <button type="submit">Book Now</button>
-            </form>
-        </div>
-    </div>
-    <!-- The start of footer of the index -->
-    <footer id="footer">
-        <div class="footer-links">
-            <a class="footer-link" href="html/terms.html" >Terms & Conditions</a>
-            <a class="footer-link" href="html/economic_cars.html">Economic Cars</a>
-            <a class="footer-link" href="html/about_us.html">About Us</a>
-        </div>
-        <div class="footer-social">
-            <a class="social-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
-            </a>
-            <a class="social-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
-            </a>
-            <a class="social-icon">
-                <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
-            </a>
-        </div>
+        <!-- End of openfeedback() -->
+        
+        <!-- hero -->
+        <section class="hero" id="Home">
+            <h1 class="reveal">Contribute to Developing and Building Your University.</h1>
+            <p class="reveal">Every Pound Makes a Difference...</p>
+        </section>
 
-        <div class="footer-copy">
-            <p>جميع الحقوق محفوظة للموقع 2025©</p>
+        <!--   About Us   -->
+        <section class="about" id="About">
+            <div class="container">
+                <h1 class="text-center mb-4 reveal">About Us</h1>
+                <p class="reveal">We are a student-led initiative at FCAI aiming to raise funds for various projects that
+                    enhance our university experience. From improving facilities to supporting student activities, we believe in
+                    the power of community and collective effort. Join us in making a positive impact on our campus!
+                </p>
+                <a class="Website-Owners reveal" href="html/about.html">Website Owners</a>
+            </div>
+        </section>
+            
+        <!-- Start of nav -->
+        <nav>
+            <h2 id="h2-of-nav">These are our cars. You can choose your favorite one. Also you can choose the type of the car:
+            </h2>
+            <div>
+                <ul id="car-types">
+                    <li onclick="document.getElementById('luxury').scrollIntoView({behavior: 'smooth'});">Luxury</li>
+                    <li onclick="document.getElementById('suv').scrollIntoView({behavior: 'smooth'});">SUV</li>
+                    <li onclick="document.getElementById('sport').scrollIntoView({behavior: 'smooth'});">Sport</li>
+                    <li onclick="document.getElementById('trucks').scrollIntoView({behavior: 'smooth'});">Trucks</li>
+                    <li onclick="document.getElementById('modern').scrollIntoView({behavior: 'smooth'});">Modern</li>
+                </ul>
+            </div>
+            <button id="go-above-btn" onclick="document.getElementById('header').scrollIntoView({behavior: 'smooth'});">▲</button>
+        </nav>
+        <!-- End of nav -->
+        <!-- The start of section of the index -->
+        <section>
+            <!-- Start of Luxury -->
+            <div id="luxury">
+                <div class="right-h1-left">
+                    <button id="right-btn">►</button>
+                    <h1 id="h1-car-types">Luxury cars section</h1>
+                    <button id="left-btn">◀</button>
+                </div>
+                <div class="for-flex">
+                    <div id="car">
+                        <h3 class="brand">Rolls-Royce</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/1.png" alt="GLC Coupe 2025">
+                        <p>Price: 1599$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Rolls-Royce</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/2.png" alt="G63 2025">
+                        <p>Price: 1399$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Rolls-Royce</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/3.png" alt="elantra 2022">
+                        <p>Price: 2599$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Bentley</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/4.png" alt="">
+                        <p>Price: 1799$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Bentley</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/5.png" alt="tucon 2023">
+                        <p>Price: 2299$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Cadillac</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/6.png" alt="corolla 2022">
+                        <p>Price: 1299$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">GMC</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/7.png" alt="GLC Coupe 2025">
+                        <p>Price: 1599$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Range-Rover</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/8.png" alt="G63 2025">
+                        <p>Price: 1399$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Toyota</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/9.png" alt="elantra 2022">
+                        <p>Price: 2599$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Lexus</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/10.png" alt="">
+                        <p>Price: 1799$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Lexus</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/11.png" alt="tucon 2023">
+                        <p>Price: 2299$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Maseratti</h3>
+                        <p class="carmodel"></p>
+                        <img src="attachments/luxury/12.png" alt="corolla 2022">
+                        <p>Price: 1299$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of luxury -->
+            <!-- Start of SUV -->
+            <div id="suv">
+                <div class="right-h1-left">
+                    <button id="right-btn">►</button>
+                    <h1 id="h1-car-types">SUV cars section</h1>
+                    <button id="left-btn">◀</button>
+                </div>
+                <div class="for-flex">
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">M8 F93 2024</p>
+                        <img src="attachments/SUV/1.png" alt="MG ZS">
+                        <p>Price: 2899$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">M8 F93 2024</p>
+                        <img src="attachments/SUV/2.png" alt="MG ZS">
+                        <p>Price: 2899$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">X3 G01 2023</p>
+                        <img src="attachments/SUV/3.png" alt="MG5">
+                        <p>Price: 1199$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Elantra 2023</p>
+                        <img src="attachments/SUV/4.png" alt="tucson 2008">
+                        <p>Price: 699$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Tucson 2023</p>
+                        <img src="attachments/SUV/5.png" alt="corolla 2022">
+                        <p>Price: 599$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Elantra 2024</p>
+                        <img src="attachments/SUV/6.png" alt="Hummer 2006">
+                        <p>Price: 399$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Elantra 2023</p>
+                        <img src="attachments/SUV/7.png" alt="tucson 2008">
+                        <p>Price: 699$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Tucson 2023</p>
+                        <img src="attachments/SUV/8.png" alt="corolla 2022">
+                        <p>Price: 599$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Elantra 2024</p>
+                        <img src="attachments/SUV/9.png" alt="Hummer 2006">
+                        <p>Price: 399$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of SUV -->
+            <!-- Start of Sports -->
+            <div id="sport">
+                <div class="right-h1-left">
+                    <button id="right-btn">►</button>
+                    <h1 id="h1-car-types">Sport cars section</h1>
+                    <button id="left-btn">◀</button>
+                </div>
+                <div class="for-flex">
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">M8 F93 2024</p>
+                        <img src="attachments/sports/1.png" alt="MG ZS">
+                        <p>Price: 2899$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">X3 G01 2023</p>
+                        <img src="attachments/sports/2.png" alt="MG5">
+                        <p>Price: 1199$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">M8 F93 2024</p>
+                        <img src="attachments/sports/3.png" alt="MG ZS">
+                        <p>Price: 2899$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">X3 G01 2023</p>
+                        <img src="attachments/sports/4.png" alt="MG5">
+                        <p>Price: 1199$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Elantra 2023</p>
+                        <img src="attachments/sports/5.png" alt="tucson 2008">
+                        <p>Price: 699$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Tucson 2023</p>
+                        <img src="attachments/sports/6.png" alt="corolla 2022">
+                        <p>Price: 599$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">M8 F93 2024</p>
+                        <img src="attachments/sports/7.png" alt="MG ZS">
+                        <p>Price: 2899$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">X3 G01 2023</p>
+                        <img src="attachments/sports/8.png" alt="MG5">
+                        <p>Price: 1199$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">M8 F93 2024</p>
+                        <img src="attachments/sports/9.png" alt="MG ZS">
+                        <p>Price: 2899$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">BMW</h3>
+                        <p class="carmodel">X3 G01 2023</p>
+                        <img src="attachments/sports/10.png" alt="MG5">
+                        <p>Price: 1199$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Elantra 2023</p>
+                        <img src="attachments/sports/11.png" alt="tucson 2008">
+                        <p>Price: 699$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Tucson 2023</p>
+                        <img src="attachments/sports/12.png" alt="corolla 2022">
+                        <p>Price: 599$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Sports -->
+            <!-- Start of Trucks -->
+            <div id="trucks">
+                <div class="right-h1-left">
+                    <button id="right-btn">►</button>
+                    <h1 id="h1-car-types">Truck (4x4) cars section</h1>
+                    <button id="left-btn">◀</button>
+                </div>
+                <div class="for-flex">
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">Elantra 2024</p>
+                        <img src="attachments/trucks/1.png" alt="Hummer 2006">
+                        <p>Price: 399$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Kia</h3>
+                        <p class="carmodel">K4 2025</p>
+                        <img src="attachments/trucks/2.png" alt="corolla2000">
+                        <p>Price: 999$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Kia</h3>
+                        <p class="carmodel">Optima 2022</p>
+                        <img src="attachments/trucks/3.png" alt="corolla 2022">
+                        <p>Price: 199$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Kia</h3>
+                        <p class="carmodel">Kona 2023</p>
+                        <img src="attachments/trucks/4.png" alt="Fiat 128">
+                        <p>Price: 299$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Kia</h3>
+                        <p class="carmodel">carnival 2020</p>
+                        <img src="attachments/trucks/5.png" alt="Fiat 128">
+                        <p>Price: 499$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">MG</h3>
+                        <p class="carmodel" dir="ltr">5 2023</p>
+                        <img src="attachments/trucks/6.png" alt="">
+                        <p>Price: 99$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Kia</h3>
+                        <p class="carmodel">Kona 2023</p>
+                        <img src="attachments/trucks/7.png" alt="Fiat 128">
+                        <p>Price: 299$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Kia</h3>
+                        <p class="carmodel">carnival 2020</p>
+                        <img src="attachments/trucks/8.png" alt="Fiat 128">
+                        <p>Price: 499$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">MG</h3>
+                        <p class="carmodel" dir="ltr">5 2023</p>
+                        <img src="attachments/trucks/9.png" alt="">
+                        <p>Price: 99$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Trucks -->
+            <!-- Start of Modern cars -->
+            <div id="modern">
+                <div class="right-h1-left">
+                    <button id="right-btn">►</button>
+                    <h1 id="h1-car-types">Modern cars section</h1>
+                    <button id="left-btn">◀</button>
+                </div>
+                <div class="for-flex">
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel" dir="ltr">tucson GDI</p>
+                        <img src="attachments/modern/1.png" alt="">
+                        <p>Price: 99$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel" dir="ltr">Creta</p>
+                        <img src="attachments/modern/2.png" alt="">
+                        <p>Price: 79$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Skoda</h3>
+                        <p class="carmodel">6</p>
+                        <img src="attachments/modern/3.png" alt="">
+                        <p>Price: 59$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">MG</h3>
+                        <p class="carmodel" dir="ltr">ZS</p>
+                        <img src="attachments/modern/4.png" alt="">
+                        <p>Price: 99$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">MG</h3>
+                        <p class="carmodel" dir="ltr">5</p>
+                        <img src="attachments/modern/5.png" alt="">
+                        <p>Price: 79$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">MG</h3>
+                        <p class="carmodel">6</p>
+                        <img src="attachments/modern/6.png" alt="">
+                        <p>Price: 59$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Kia</h3>
+                        <p class="carmodel">K3</p>
+                        <img src="attachments/modern/7.png" alt="">
+                        <p>Price: 99$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Honda</h3>
+                        <p class="carmodel" dir="ltr">civic</p>
+                        <img src="attachments/modern/8.png" alt="">
+                        <p>Price: 79$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Toyota</h3>
+                        <p class="carmodel">camry</p>
+                        <img src="attachments/modern/9.png" alt="">
+                        <p>Price: 59$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Hyundai</h3>
+                        <p class="carmodel">i20</p>
+                        <img src="attachments/modern/10.png" alt="">
+                        <p>Price: 99$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                    <div id="car">
+                        <h3 class="brand">Suzuki</h3>
+                        <p class="carmodel" dir="ltr">swift</p>
+                        <img src="attachments/modern/11.png" alt="">
+                        <p>Price: 79$</p>
+                        <button class="booking-btn">Book Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End of Modern cars -->
+        </section>
+        <!-- The end of section of the index -->
+        <div id="booking-modal">
+            <div id="booking-modal-content">
+                <button id="close-booking-modal" onclick="closeBookingModal()">×</button>
+                <h1 id="booking-info">Booking Details</h1>
+                <form id="booking-form" action="">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <label for="car-colour">Car Colour:</label>
+                    <select name="choose-colour" id="choose-colour">
+                        <option value="white">White</option>
+                        <option value="gray">Gray</option>
+                        <option value="silver">Silver</option>
+                        <option value="brown">Brown</option>
+                        <option value="beige">Beige</option>
+                        <option value="orange">Orange</option>
+                        <option value="purple">Purple</option>
+                        <option value="pink">Pink</option>
+                        <option value="maroon">Maroon</option>
+                        <option value="navy">Navy</option>
+                        <option value="olive">Olive</option>
+                        <option value="teal">Teal</option>
+                        <option value="aqua">Aqua</option>
+                        <option value="lime">Lime</option>
+                        <option value="cyan">Cyan</option>
+                        <option value="magenta">Magenta</option>
+                        <option value="violet">Violet</option>
+                        <option value="gold">Gold</option>
+                        <option value="orchid">Orchid</option>
+                        <option value="crimson">Crimson</option>
+                        <option value="indigo">Indigo</option>
+                        <option value="tan">Tan</option>
+                        <option value="black">Black</option>
+                        <option value="blue">Blue</option>
+                        <option value="red">Red</option>
+                        <option value="yellow">Yellow</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <label for="time">Rental period:</label>
+                    <select name="rental-period" id="rental-period">
+                        <option value="1">1 Day</option>
+                        <option value="2">2 Days</option>
+                        <option value="3">3 Days</option>
+                        <option value="7">1 Week</option>
+                        <option value="14">2 Weeks</option>
+                        <option value="30">1 Month</option>
+                        <option value="60">2 Months</option>
+                        <option value="90">3 Months</option>
+                        <option value="180">6 Months</option>
+                        <option value="365">1 Year</option>
+                    </select>
+                    <h3 id="booking-question">Do you want to get the car by delivery to your home?</h3>
+                    <input type="checkbox" id="delivery" name="delivery">
+                    <button type="submit">Book Now</button>
+                </form>
+            </div>
         </div>
-    </footer>
-    <!-- The end of footer of the index -->
-    
-    <script src="javascript/main.js"></script>
-</body>
+        <!-- The start of footer of the index -->
+        <footer id="footer">
+            <div class="footer-links">
+                <a class="footer-link" href="html/terms.html" >Terms & Conditions</a>
+                <a class="footer-link" href="html/economic_cars.html">Economic Cars</a>
+                <a class="footer-link" href="html/about_us.html">About Us</a>
+            </div>
+            <div class="footer-social">
+                <a class="social-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+                </a>
+                <a class="social-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+                <a class="social-icon">
+                    <img src="https://cdn-icons-png.flaticon.com/512/145/145807.png" alt="LinkedIn">
+                </a>
+            </div>
+
+            <div class="footer-copy">
+                <p>جميع الحقوق محفوظة للموقع 2025©</p>
+            </div>
+        </footer>
+        <!-- The end of footer of the index -->
+        
+        <script src="javascript/main.js"></script>
+    </body>
 </html>
