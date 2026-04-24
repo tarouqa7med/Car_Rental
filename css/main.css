@@ -82,14 +82,12 @@ header button {
   display: none;
 }
 header .container div:nth-child(2) {
-  margin-left: 35px;
-  width: auto;
+  width: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 header .container div:nth-child(2):hover {
-  background-color: red;
   .car.car-off {
     z-index: -1;
   }
@@ -142,19 +140,39 @@ ul li {
   scale: 0.75;
 }
 .container input {
+  margin-left: -20px;
   padding: 10px;
+  width: 150px;
   height: 40px;
   border: none;
   outline: 2px solid var(--primary-color5);
   border-radius: 10px;
-  /* transition: 250ms; */
+  transition: 100ms;
 }
 .container input:hover {
-  box-shadow: 0 0 5px var(--primary-color5);
+  box-shadow: 0 0 15px var(--primary-color5);
 }
 .container input:focus {
   outline: 2px solid blue;
   box-shadow: 0 0 0 5px var(--primary-color5);
+}
+.container .loginBtn {
+  background: var(--primary-color5);
+  color: var(--primary-color1);
+  border: none;
+  box-shadow: 0 0 0 2px var(--primary-color3);
+  padding: 10px 20px;
+  border-radius: 35px;
+  width: 100px;
+  transition: 200ms;
+}
+.container .loginBtn:hover {
+    background: var(--primary-color4);
+    transform: translateY(-5px);
+}
+.container .loginBtn:active {
+    scale: 0.75;
+    background: var(--primary-color2);
 }
 .container .theme {
   width: 30px;
@@ -364,7 +382,7 @@ nav styles
   padding-bottom: 50px;
   scroll-margin-top: 100px;
   background: 
-  linear-gradient(rgba(0, 0, 0, 0.65));
+  linear-gradient(rgba(0, 0, 0, 0.75));
 }
 .about .container {
   font-family: 'Nunito-Bold';
@@ -384,7 +402,7 @@ nav styles
   background: var(--primary-color5);
   color: var(--primary-color1);
   border: 1px solid transparent;
-  box-shadow: 0 0 0 1px var(--primary-color4);
+  box-shadow: 0 0 0 2px var(--primary-color3);
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 35px;
