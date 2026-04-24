@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/cars-style.css">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <!-- Header -->
+        <header>
+            <div class="container reveal">
+        
+                <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
+                <button id="menu-btn" class="reveal">☰</button>
+                <div>
+                    <img class="reveal car car-on" src="attachments/wallpapers/header-logo2.png" alt=""
+                        onclick="window.location.href='/index.html'">
+                    <img class="reveal car car-off" src="attachments/wallpapers/header-logo1.png" alt="">
+                </div>
+                <ul>
+                    <li class="reveal"><a href="#Home" id="delayed-link" target="_self" draggable="false"
+                            title="Sign in or create a new account">Home</a></li>
+                    <li class="reveal"><a href="#About" id="delayed-link" target="_self" draggable="false"
+                            title="Learn more about us">About Us</a></li>
+                    <li class="reveal"><a href="#cars-pages" id="delayed-link" target="_self" draggable="false"
+                            title="Learn more about us">Cars</a></li>
+                    <li class="reveal"><a href="#contact" id="delayed-link" target="_self" draggable="false"
+                            title="Contact us via our Social Media accounts">Contact Us</a></li>
+                    <li class="reveal"><a href="#feedback" id="delayed-link" draggable="false"
+                            title="Give us your feedback and your experince." onclick="openfeedback()">Feedback</a></li>
+                    <li class="reveal"><a href="html/eco-cars.html" id="delayed-link" target="_self" draggable="false"
+                            title="Sign in or create a new account">Eco</a></li>
+                </ul>
+                <input type="reveal" name="Search" placeholder="Search here ..." title="Search for your food here">
+                <a href="html/register.html" class="btn btn-light mx-1 loginBtn reveal" target="_self" draggable="false"
+                    title="Sign in or create a new account">Sign In</a>
+                <div class="theme reveal">
+                    <i class="bi bi-sun-fill lightMode theme-icon"></i>
+                    <i class="bi bi-moon-fill darkMode theme-icon"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Start of Modern cars -->
+        <div id="modern">
+            <div class="right-h1-left">
+                <button id="right-btn">►</button>
+                <h1 id="h1-car-types">Modern cars section</h1>
+                <button id="left-btn">◀</button>
+            </div>
+            <div class="for-flex">
+                <div id="car">
+                    <h3 class="brand">Hyundai</h3>
+                    <p class="carmodel" dir="ltr">tucson GDI</p>
+                    <img src="attachments/modern/1.png" alt="">
+                    <p>Price: 99$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">Hyundai</h3>
+                    <p class="carmodel" dir="ltr">Creta</p>
+                    <img src="attachments/modern/2.png" alt="">
+                    <p>Price: 79$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">Skoda</h3>
+                    <p class="carmodel">6</p>
+                    <img src="attachments/modern/3.png" alt="">
+                    <p>Price: 59$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">MG</h3>
+                    <p class="carmodel" dir="ltr">ZS</p>
+                    <img src="attachments/modern/4.png" alt="">
+                    <p>Price: 99$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">MG</h3>
+                    <p class="carmodel" dir="ltr">5</p>
+                    <img src="attachments/modern/5.png" alt="">
+                    <p>Price: 79$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">MG</h3>
+                    <p class="carmodel">6</p>
+                    <img src="attachments/modern/6.png" alt="">
+                    <p>Price: 59$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">Kia</h3>
+                    <p class="carmodel">K3</p>
+                    <img src="attachments/modern/7.png" alt="">
+                    <p>Price: 99$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">Honda</h3>
+                    <p class="carmodel" dir="ltr">civic</p>
+                    <img src="attachments/modern/8.png" alt="">
+                    <p>Price: 79$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">Toyota</h3>
+                    <p class="carmodel">camry</p>
+                    <img src="attachments/modern/9.png" alt="">
+                    <p>Price: 59$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">Hyundai</h3>
+                    <p class="carmodel">i20</p>
+                    <img src="attachments/modern/10.png" alt="">
+                    <p>Price: 99$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+                <div id="car">
+                    <h3 class="brand">Suzuki</h3>
+                    <p class="carmodel" dir="ltr">swift</p>
+                    <img src="attachments/modern/11.png" alt="">
+                    <p>Price: 79$</p>
+                    <button class="booking-btn">Book Now</button>
+                </div>
+            </div>
+        </div>
+        <!-- End of Modern cars -->
+</body>
+</html>

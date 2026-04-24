@@ -55,6 +55,16 @@
     }
 }
 
+/* --------------------------------------------------------- CSS for login.html & register.html */
+
+@keyframes blur {
+    from {
+        filter: blur(100px);
+    } to {
+        filter: blur(0px);
+    }
+}
+
 /* reveal code for all project */
 
 .reveal {
