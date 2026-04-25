@@ -493,7 +493,7 @@ button#feedback-submit:hover {
   z-index: -1;
 }
 .car-body:nth-child(1)::before {
-  background: url('../attachments/cars-pics/luxury/Luxary\ car.jpeg');
+  background: url('../attachments/cars-pics/luxury/LEAD.jpg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
