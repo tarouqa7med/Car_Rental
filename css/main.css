@@ -216,6 +216,8 @@ Popup styles
   z-index: 1000;
 }
 .Feedback-Popup .container {
+  justify-content: center;
+  gap: 20px;
   margin: auto;
   padding: 15px 35px;
   position: absolute;
@@ -231,6 +233,18 @@ Popup styles
   scrollbar-width: none;
   animation: mini-pop-up-feedback 750ms forwards ease;
 }
+.Feedback-Popup input[type="radio"]{
+  appearance: none;        /* removes default style */
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;  /* outer circle */
+  border-radius: 50%;      /* makes it circular */
+  outline: none;
+  cursor: pointer;
+  position: relative;
+}
+
 .container .close {
   position: absolute;
   top: 0;
@@ -265,6 +279,7 @@ div.div-for-form {
   display: grid;
 }
 div.first-and-last-name {
+  position: relative;
   display: flex;
   margin: 0 auto;
   gap: 50px;
@@ -290,16 +305,15 @@ hr.feedback-hr {
   width: 100%;
 }
 div.feedback-choose ul {
-  margin: 0 auto;
-  margin-bottom: 20px;
-  padding: 8px;
+  display: flex;
+  padding: 10px 25px;
   background-color: var(--primary-color2);
   border-radius: 10px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  gap: 10px;
+  gap: 25px;
 }
 button#feedback-submit {
   margin: 0 auto;
