@@ -1,35 +1,47 @@
 <!DOCTYPE html>
-<html lang="en" class="fontAll" dir="rtl">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>L2E</title>
         <link rel="icon" href="attachments/page-logo.png">
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap-icons.css">
+        <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/eco-cars.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/animations.css">
     </head>
     <body>
+        
+        <!-- Header -->
         <header>
-            <div class="dsearch">
-                <input class="search" type="text" placeholder="search...">
-                <button type="submit">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
-            </div>
-            <div class="modec">
-                <button class="mode" onclick="window.location.href='eco-cars_(dark_mode).html'">
-                    <i class="fa-solid fa-moon"></i>
-                </button>
-            </div>
-            <nav class="navigation">
-                <ul class="button-list">       
-                    <li><a href="about_us.html">About Us</a></li>
-                    <li><a onclick="loginmodal()">Login</a></li>
+            <div class="container reveal">
+        
+                <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
+                <button id="menu-btn" class="reveal">☰</button>
+                <div>
+                    <img class="reveal car car-on" src="../attachments/wallpapers/header-logo2.png" alt=""
+                        onclick="window.location.href='#Home'">
+                    <img class="reveal car car-off" src="../attachments/wallpapers/header-logo1.png" alt="">
+                </div>
+                <ul>
+                    <li class="reveal"><a href="../index.html#Home" id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Home</a></li>
+                    <li class="reveal"><a href="../index.html#About" id="delayed-link" target="_self" draggable="false" title="Learn more about us">About Us</a></li>
+                    <li class="reveal"><a href="../index.html#cars-pages" id="delayed-link" target="_self" draggable="false" title="Learn more about us">Cars</a></li>
+                    <li class="reveal"><a href="../index.html#contact" id="delayed-link" target="_self" draggable="false" title="Contact us via our Social Media accounts">Contact Us</a></li>
+                    <li class="reveal"><a href="#feedback" id="delayed-link" draggable="false" title="Give us your feedback and your experince." onclick="openfeedback()">Feedback</a></li>
+                    <li class="reveal"><a href="../html/eco-cars.html" id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Eco</a></li>
                 </ul>
-            </nav>
+                <input type="reveal" name="Search" placeholder="Search here ..." title="Search for your food here">
+                <a href="html/register.html" class="btn btn-light mx-1 loginBtn reveal" target="_self" draggable="false"
+                    title="Sign in or create a new account">Sign In</a>
+                <div class="theme reveal">
+                    <i class="bi bi-sun-fill lightMode theme-icon"></i>
+                    <i class="bi bi-moon-fill darkMode theme-icon"></i>
+                </div>
+            </div>
         </header>
-        <br><br><br><br><br>
 
         <section class="carsection">
             <br>
@@ -485,6 +497,6 @@
             </div>
         </footer>
 
-        <script src="javascript/main.js"></script>
+        <script src="../javascript/main.js"></script>
     </body>
 </html>
