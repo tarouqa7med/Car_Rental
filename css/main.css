@@ -493,32 +493,32 @@ button#feedback-submit:hover {
   z-index: -1;
 }
 .car-body:nth-child(1)::before {
-  background: url('../attachments/cars-pics/luxury/sddefault.jpg');
-  background-size: contain;
+  background: url('../attachments/cars-pics/luxury/rolls-royce-phantom-goldfinger.jpg');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .car-body:nth-child(2)::before {
-  background: url('../attachments/cars-pics/SUV/CR-Cars-InlineHero-2026-Toyota-Grand-Highlander-Limited-f-driving-2-26.jpeg');
-  background-size: contain;
+  background: url('../attachments/cars-pics/SUV/2022-range-rover-se-lwb-109-1665593832.avif');
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .car-body:nth-child(3)::before {
   background: url('../attachments/cars-pics/sports/mclaren-p1-bahrain-300_mk-edit-crop4000x2143-1-1200x720.jpg');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .car-body:nth-child(4)::before {
   background: url('../attachments/cars-pics/trucks/Hennessey\ Mammoth\ 1000\ TRX_001.jpg');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
 .car-body:nth-child(5)::before {
   background: url('../attachments/cars-pics/modern/1_630_1120_1_70__Features_crop_2019-Chevrolet-Camaro-ZL1-1LE-018.jpg');
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
