@@ -26,13 +26,22 @@
   --primary-color4: #3f6593;
   --primary-color5: #1b3554;
   --primary-color6: #000f22;
-  --pic: url('../attachments/wallpapers/background-lightmode-pica.png');
+  --pic:  url('../attachments/wallpapers/background-lightmode-pica.png');
+}
+.dark-mode {
+  --primary-color1: #000f22;
+  --primary-color2: #1b3554;
+  --primary-color3: #3f6593;
+  --primary-color4: #5b86b8;
+  --primary-color5: #80aad3;
+  --primary-color6: #c0e6fd;
+  --pic:  url('../attachments/wallpapers/background-darkmode-pica.png');
 }
 * {
   /* margin: 0; */
   padding: 0;
   font-family: 'Nunito-Bold';
-  transition: all 200ms 0s ease;
+  transition: all 250ms 150ms linear;
 }
 html {
   scroll-behavior: smooth;
@@ -43,6 +52,7 @@ body {
   padding: 0;
   position: relative;
   top: 0;
+  transition: 2s;
 }
 body::before {
   content: "";
@@ -70,6 +80,7 @@ header {
   background-color: color-mix(in srgb, var(--primary-color1) 80%, transparent);
   backdrop-filter: blur(10px);
   overflow: hidden;
+  transition: all 200ms 100ms linear;
   z-index: 1000;
 }
 header .container {
@@ -102,7 +113,7 @@ div:nth-child(2) .car {
   border-radius: 0;
   filter: none;
   cursor: pointer;
-  transition: 100ms;
+  transition: all 150ms 0s ease;
 }
 div:nth-child(2) .car:hover {
   filter: drop-shadow(0 0 2px var(--primary-color6));
@@ -119,7 +130,7 @@ ul li {
   width: 110px;
   display: flex;
   justify-content: center;
-}
+  }
 .container ul li a {  /* it will be the same */
   padding: 8px;
   width: 100%;
@@ -128,7 +139,7 @@ ul li {
   border-radius: 10px 10px 0 0;
   color: var(--primary-color6) !important;
   text-decoration: none;
-  transition: 200ms;
+  transition: all 200ms 100ms linear;
 }
 .container ul li a:hover {
   border: 2px solid var(--primary-color4);
@@ -136,6 +147,7 @@ ul li {
   font-weight: bold;
   transform: translateY(-5px);
   box-shadow: 0 10px 20px 0 #00ffff52;
+  transition: 100ms;
 }
 .container ul li a:active {
   scale: 0.75;
@@ -148,10 +160,11 @@ ul li {
   border: none;
   outline: 2px solid var(--primary-color5);
   border-radius: 10px;
-  transition: 100ms;
+  transition: all 200ms 100ms linear;
 }
 .container input:hover {
   box-shadow: 0 0 15px var(--primary-color5);
+  transition: 100ms;
 }
 .container input:focus {
   outline: 2px solid blue;
@@ -165,15 +178,16 @@ ul li {
   padding: 10px 20px;
   border-radius: 35px;
   width: 100px;
-  transition: 200ms;
+  transition: all 200ms 100ms linear;
 }
 .container .loginBtn:hover {
-    background: var(--primary-color4);
-    transform: translateY(-5px);
+  background: var(--primary-color4);
+  transform: translateY(-3px);
+  transition: 100ms;
 }
 .container .loginBtn:active {
-    scale: 0.75;
-    background: var(--primary-color2);
+  scale: 0.75;
+  background: var(--primary-color2);
 }
 .container .theme {
   width: 30px;
@@ -233,18 +247,21 @@ Popup styles
   scrollbar-width: none;
   animation: mini-pop-up-feedback 750ms forwards ease;
 }
-.Feedback-Popup input[type="radio"]{
-  appearance: none;        /* removes default style */
-  -webkit-appearance: none;
+.Feedback-Popup input[type="radio"] {
+  margin-right: 5px;
   width: 18px;
   height: 18px;
-  border: 2px solid #ccc;  /* outer circle */
-  border-radius: 50%;      /* makes it circular */
   outline: none;
   cursor: pointer;
   position: relative;
 }
+.Feedback-Popup input[type="radio"]:hover,
+.Feedback-Popup input[type="radio"]:focus {
+  box-shadow: none;
+  outline: none;
+  border: none;
 
+}
 .container .close {
   position: absolute;
   top: 0;
@@ -325,11 +342,13 @@ button#feedback-submit {
   color: var(--primary-color1);
   border: none;
   border-radius: 5px;
+  box-shadow: 0 0 0 1px var(--primary-color3);
   transition: 100ms;
 }
 button#feedback-submit:hover {
   background-color: var(--primary-color4);
-  box-shadow: 0 3px 10px 0 black;
+  box-shadow: 0 3px 10px 0 black,
+              0 0 0 1px var(--primary-color2);
 }
 /*------------------------------------------------------------------------------------- hero */
 
@@ -417,11 +436,11 @@ button#feedback-submit:hover {
   padding: 10px 20px;
   border-radius: 35px;
   width: auto;
-  transition: 200ms;
 }
 .container .Website-Owners:hover {
   background: var(--primary-color4);
   transform: translateY(-3px);
+  transition: 100ms;
 }
 .container .Website-Owners:active {
   background: var(--primary-color2);
@@ -480,7 +499,6 @@ button#feedback-submit:hover {
   justify-content: space-around;
   align-items: center;
   overflow: hidden;
-  transition: 200ms;
 }
 .car-body::before {
   content: "";
@@ -489,7 +507,7 @@ button#feedback-submit:hover {
   right: 0;
   width: 100%;
   height: 62%;
-  transition: 200ms;
+  transition: 250ms;
   z-index: -1;
 }
 .car-body:nth-child(1)::before {
@@ -553,11 +571,9 @@ button#feedback-submit:hover {
   width: 100%;
   height: 100%;
   text-align: left;
-  transition: 250ms;
-}
+  transition: all 250ms 100ms linear;}
 .car-body a:hover {
   background: linear-gradient(var(--primary-color2));
-  color: #b4f1ff;
 }
 .car-body a:active {
   background: linear-gradient(var(--primary-color1));
@@ -576,7 +592,8 @@ button#feedback-submit:hover {
   width: 100%;
   height: 100%;
   gap: 20px;
-  transition: 200ms !important;
+
+  transition: all 250ms 100ms linear !important;
 }
 .contact .container {
   padding: 25px;
@@ -619,7 +636,6 @@ button#feedback-submit:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: 50ms;
 }
 .icon-div p {
   font-size: 25px;
@@ -649,7 +665,7 @@ button#feedback-submit:hover {
   background-color: var(--primary-color1);
   outline: 1px solid var(--primary-color5);
   width: 50%;
-  transition: 250ms;
+  transition: all 250ms 100ms linear;
 }
 .contact form div input:focus {
   outline: 2px solid blue;
@@ -660,7 +676,7 @@ button#feedback-submit:hover {
   border-radius: 8px;
   background-color: var(--primary-color1);
   outline: 1px solid var(--primary-color5);
-  transition: 250ms;
+  transition: all 250ms 100ms linear;
 }
 .contact form div input::placeholder,
 .contact form textarea::placeholder {
@@ -678,13 +694,76 @@ button#feedback-submit:hover {
   box-shadow: 0 0 0 2px var(--primary-color3);
   border-radius: 30px;
   height: 45px;
-  transition: 200ms;
+  transition: all 250ms 100ms linear;
 }
 .contact form button:hover {
   background: var(--primary-color4) !important;
+  transition: 100ms;
 }
 .contact form button:focus {
   background: var(--primary-color2) !important;
+}
+
+
+
+
+.pop-up {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: #00000080;
+  backdrop-filter: blur(20px);
+  display: none;
+  scroll-behavior: none;
+  z-index: 1000;
+  animation: pop-up 750ms forwards ease;
+}
+.pop-up .mini-pop-up {
+  margin: auto;
+  padding: 40px;
+  position: relative;
+  background:  var(--primary-color1);
+  color: var(--primary-color6);
+  width: 50%;
+  min-width: 450px;
+  height: 95%;
+  overflow-y: scroll;
+  direction: rtl;
+}
+.pop-up .mini-pop-up::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color1);
+  z-index: -1;
+}
+.mini-pop-up .payCloseBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--primary-color2);
+  color: var(--primary-color6);
+  border: none;
+  width: 50px;
+  height: 35px;
+  transition: 150ms;
+}
+.mini-pop-up .payCloseBtn:hover {
+  background-color: red;
+}
+.mini-pop-up > h1 {
+  text-align: center;
+  font-weight:bolder;
+}
+.mini-pop-up form {
+  display: grid;
+  font-weight: bold;
 }
 
 /* ------------------------------------------------------------------------- footer */
@@ -694,7 +773,7 @@ footer {
   padding: 50px 0;
   display: grid;
   height: 220px;
-  background: color-mix(in srgb, var(--primary-color3) 75%, transparent);
+  background: color-mix(in srgb, var(--primary-color5) 75%, transparent);
   backdrop-filter: blur(5px);
   color: white;
   text-align: center;

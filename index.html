@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap/bootstrap-icons.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/main2.css">
         <link rel="stylesheet" href="css/responsive.css">
         <link rel="stylesheet" href="css/animations.css">
         <link rel="icon"       href="attachments/wallpapers/page-logo.png">
@@ -17,7 +18,7 @@
 
         <!-- Header -->
         <header>
-            <div class="container reveal">
+            <div class="container">
 
                 <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
                 <button id="menu-btn" class="reveal">☰</button>
@@ -33,11 +34,11 @@
                     <li class="reveal"><a href="#feedback"          id="delayed-link"                draggable="false" title="Give us your feedback and your experince." onclick="openfeedback()" >Feedback</a></li>
                     <li class="reveal"><a href="html/eco-cars.html" id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Eco</a></li>
                 </ul>
-                <input type="reveal" name="Search" placeholder="Search here ..." title="Search for your food here">
+                <input class="reveal" type="text" name="Search" placeholder="Search here ..." title="Search for your food here">
                 <a href="html/register.html" class="btn btn-light mx-1 loginBtn reveal" target="_self" draggable="false" title="Sign in or create a new account">Sign In</a>
-                <div class="theme reveal">
-                    <i class="bi bi-sun-fill lightMode theme-icon"></i>
-                    <i class="bi bi-moon-fill darkMode theme-icon"></i>
+                <div class="theme">
+                    <i class="bi bi-sun-fill lightMode theme-icon" onclick="changeColorMode()"></i>
+                    <i class="bi bi-moon-fill darkMode theme-icon" onclick="changeColorMode()"></i>
                 </div>
             </div>
         </header>
