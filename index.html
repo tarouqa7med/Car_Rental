@@ -20,6 +20,7 @@
         <header>
             <div class="container">
 
+                
                 <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
                 <button id="menu-btn" class="reveal">☰</button>
                 <div>
@@ -31,7 +32,6 @@
                     <li class="reveal"><a href="#About"             id="delayed-link" target="_self" draggable="false" title="Learn more about us">About Us</a></li>
                     <li class="reveal"><a href="#cars-pages"        id="delayed-link" target="_self" draggable="false" title="Learn more about us">Cars</a></li>
                     <li class="reveal"><a href="#contact"           id="delayed-link" target="_self" draggable="false" title="Contact us via our Social Media accounts">Contact Us</a></li>
-                    <li class="reveal"><a href="#feedback"          id="delayed-link"                draggable="false" title="Give us your feedback and your experince." onclick="openfeedback()" >Feedback</a></li>
                     <li class="reveal"><a href="html/eco-cars.html" id="delayed-link" target="_self" draggable="false" title="Sign in or create a new account">Eco</a></li>
                 </ul>
                 <input class="reveal" type="text" name="Search" placeholder="Search here ..." title="Search for your food here">
@@ -155,6 +155,16 @@
         <!-- contact -->
         <section id="contact" class="contact reveal">
             <div class="container reveal">
+                <a style="
+                    padding: 10px;
+                    position: fixed;
+                    bottom: 50px;
+                    right: -20px;
+                    background-color: var(--primary-color5);
+                    color: var(--primary-color1);
+                    border-radius: 10px;
+                    z-index: 1000;
+                " href="#feedback" id="delayed-link" title="Give us your feedback and your experince." onclick="openfeedback()" >Feedback</a>
                 <h2 class="text-center reveal">Contact Us</h2>
                 <div class="bootstrap-icons">
                     <div class="icon-div reveal">

@@ -75,18 +75,18 @@ window.onload = function () {
 //   btn => {
 //     btn.addEventListener("click", function () {
 
-//       color.setProperty("--primary-color1", "#000f22");
-//       localStorage.setItem("--primary-color1", "#000f22");
-//       color.setProperty("--primary-color2", "#1b3554");
-//       localStorage.setItem("--primary-color2", "#1b3554");
-//       color.setProperty("--primary-color3", "#3f6593");
-//       localStorage.setItem("--primary-color3", "#3f6593");
-//       color.setProperty("--primary-color4", "#5b86b8");
-//       localStorage.setItem("--primary-color4", "#5b86b8");
-//       color.setProperty("--primary-color5", "#80aad3");
-//       localStorage.setItem("--primary-color5", "#80aad3");
-//       color.setProperty("--primary-color6", "#c0e6fd");
-//       localStorage.setItem("--primary-color6", "#c0e6fd");
+    //   color.setProperty("--primary-color1", "#000f22");
+    //   localStorage.setItem("--primary-color1", "#000f22");
+    //   color.setProperty("--primary-color2", "#1b3554");
+    //   localStorage.setItem("--primary-color2", "#1b3554");
+    //   color.setProperty("--primary-color3", "#3f6593");
+    //   localStorage.setItem("--primary-color3", "#3f6593");
+    //   color.setProperty("--primary-color4", "#5b86b8");
+    //   localStorage.setItem("--primary-color4", "#5b86b8");
+    //   color.setProperty("--primary-color5", "#80aad3");
+    //   localStorage.setItem("--primary-color5", "#80aad3");
+    //   color.setProperty("--primary-color6", "#c0e6fd");
+    //   localStorage.setItem("--primary-color6", "#c0e6fd");
 //       document.body.style.setProperty("--pic", "url('../attachments/wallpapers/background-darkmode-pica.png')");
 //       localStorage.setItem("--pic", "url('../attachments/wallpapers/background-darkmode-pica.png')");
 //     });
