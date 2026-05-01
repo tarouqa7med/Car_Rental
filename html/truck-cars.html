@@ -3,75 +3,112 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap-icons.css">
+        <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/cars-style.css">
+        <title>Document</title>
     </head>
     <body>
-        <!-- Start of Trucks -->
-        <div id="trucks">
-            <div class="right-h1-left">
-                <button id="right-btn">►</button>
-                <h1 id="h1-car-types">Truck (4x4) cars section</h1>
-                <button id="left-btn">◀</button>
+
+        <!-- Header -->
+        <header>
+            <div class="container">
+        
+        
+                <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
+                <button id="menu-btn" class="reveal">☰</button>
+                <div>
+                    <img class="reveal car car-on" src="../attachments/wallpapers/header-logo2.png" alt=""
+                        onclick="window.location.href='#Home'">
+                    <img class="reveal car car-off" src="../attachments/wallpapers/header-logo1.png" alt="">
+                </div>
+                <ul>
+                    <li class="reveal"><a href="../index.html#Home" id="delayed-link" target="_self" draggable="false"
+                            title="Sign in or create a new account">Home</a></li>
+                    <li class="reveal"><a href="../index.html#About" id="delayed-link" target="_self" draggable="false"
+                            title="Learn more about us">About Us</a></li>
+                    <li class="reveal"><a href="../index.html#cars-pages" id="delayed-link" target="_self" draggable="false"
+                            title="Learn more about us">Cars</a></li>
+                    <li class="reveal"><a href="../index.html#contact" id="delayed-link" target="_self" draggable="false"
+                            title="Contact us via our Social Media accounts">Contact Us</a></li>
+                    <li class="reveal"><a href="../html/eco-cars.html" id="delayed-link" target="_self" draggable="false"
+                            title="Sign in or create a new account">Eco</a></li>
+                </ul>
+        
+                <a href="html/register.html" class="btn btn-light mx-1 loginBtn reveal" target="_self" draggable="false"
+                    title="Sign in or create a new account">Sign In</a>
+                <div class="theme">
+                    <i class="bi bi-sun-fill lightMode theme-icon" onclick="changeColorMode()"></i>
+                    <i class="bi bi-moon-fill darkMode theme-icon" onclick="changeColorMode()"></i>
+                </div>
             </div>
-            <div class="for-flex">
-                <div id="car">
+        </header>
+        <!-- Start of Trucks -->
+        <div class="car-section" id="trucks">
+            <div class="right-h1-left">
+                <a id="right-btn" href="sport-cars.html">◀</a>
+                <h1 id="h1-car-types">Truck (4x4) cars section</h1>
+                <a id="left-btn" href="modern-cars.html">►</a>
+            </div>
+            <div class="container">
+                <div class="car">
                     <h3 class="brand">Mercedes</h3>
                     <p class="carmodel">X Class</p>
                     <img src="../attachments/cars-pics/trucks/1.png" alt="Hummer 2006">
                     <p>Price: 399$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Mercedes</h3>
                     <p class="carmodel">G63 6x6</p>
                     <img src="../attachments/cars-pics/trucks/2.png" alt="corolla2000">
                     <p>Price: 999$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Wolkswagen</h3>
                     <p class="carmodel">Amarok</p>
                     <img src="../attachments/cars-pics/trucks/3.png" alt="corolla 2022">
                     <p>Price: 199$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Dodge</h3>
                     <p class="carmodel">RAM</p>
                     <img src="../attachments/cars-pics/trucks/4.png" alt="Fiat 128">
                     <p>Price: 299$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Ford</h3>
                     <p class="carmodel">F150 Raptor</p>
                     <img src="../attachments/cars-pics/trucks/5.png" alt="Fiat 128">
                     <p>Price: 499$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">GMC</h3>
                     <p class="carmodel" dir="ltr">Sierra 2023</p>
                     <img src="../attachments/cars-pics/trucks/6.png" alt="">
                     <p>Price: 99$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Chevrolet</h3>
                     <p class="carmodel">Silverado 2023</p>
                     <img src="../attachments/cars-pics/trucks/7.png" alt="Fiat 128">
                     <p>Price: 299$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Toyota</h3>
                     <p class="carmodel">Hilux 2023</p>
                     <img src="../attachments/cars-pics/trucks/8.png" alt="Fiat 128">
                     <p>Price: 499$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">JEEP</h3>
                     <p class="carmodel" dir="ltr">Wrangler</p>
                     <img src="../attachments/cars-pics/trucks/9.png" alt="">

@@ -1,13 +1,50 @@
 ﻿<!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
   <title>Work team</title>
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap/bootstrap-icons.css">
+  <link rel="stylesheet" href="../css/main.css">
   <link rel="stylesheet" href="../css/about.css">
 </head>
 <body>
 
-  <h2>فريق العمل - الوضع المضيء</h2>
+  <!-- Header -->
+  <header>
+    <div class="container">
+  
+  
+      <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
+      <button id="menu-btn" class="reveal">☰</button>
+      <div>
+        <img class="reveal car car-on" src="../attachments/wallpapers/header-logo2.png" alt=""
+          onclick="window.location.href='#Home'">
+        <img class="reveal car car-off" src="../attachments/wallpapers/header-logo1.png" alt="">
+      </div>
+      <ul>
+        <li class="reveal"><a href="../index.html#Home" id="delayed-link" target="_self" draggable="false"
+            title="Sign in or create a new account">Home</a></li>
+        <li class="reveal"><a href="../index.html#About" id="delayed-link" target="_self" draggable="false"
+            title="Learn more about us">About Us</a></li>
+        <li class="reveal"><a href="../index.html#cars-pages" id="delayed-link" target="_self" draggable="false"
+            title="Learn more about us">Cars</a></li>
+        <li class="reveal"><a href="../index.html#contact" id="delayed-link" target="_self" draggable="false"
+            title="Contact us via our Social Media accounts">Contact Us</a></li>
+        <li class="reveal"><a href="../html/eco-cars.html" id="delayed-link" target="_self" draggable="false"
+            title="Sign in or create a new account">Eco</a></li>
+      </ul>
+
+      <a href="html/register.html" class="btn btn-light mx-1 loginBtn reveal" target="_self" draggable="false"
+        title="Sign in or create a new account">Sign In</a>
+      <div class="theme">
+        <i class="bi bi-sun-fill lightMode theme-icon" onclick="changeColorMode()"></i>
+        <i class="bi bi-moon-fill darkMode theme-icon" onclick="changeColorMode()"></i>
+      </div>
+    </div>
+  </header>
+
+  <h2>--- Business Owners ---</h2>
   <div class="team-grid">
     <div class="member">
       <img src="../attachments/our-team/2.jpeg" alt="صورة شخصية">
@@ -68,8 +105,15 @@
         <p><span>Phone:</span> 01011010637</p>
       </div>
     </div>
-
-
+    <div class="member">
+      <img src="../attachments/our-team/0.jpg" alt="صورة شخصية">
+      <div class="info">
+        <p><span>الاسم:</span> أحمد اسامه محمد إبراهيم</p>
+        <p><span>ID:</span> 20240021</p>
+        <p><span>Email:</span> ahmedusama4498@gmail.com</p>
+        <p><span>Phone:</span> 01121804056</p>
+      </div>
+    </div>
     <div class="member">
       <img src="../attachments/our-team/0.jpg" alt="صورة شخصية">
       <div class="info">
@@ -81,5 +125,6 @@
     </div>
   </div>
 
+  <script src="../javascript/main.js"></script>
 </body>
 </html>

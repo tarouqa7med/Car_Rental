@@ -26,7 +26,8 @@
   --primary-color4: #3f6593;
   --primary-color5: #1b3554;
   --primary-color6: #000f22;
-  --pic:  url('../attachments/wallpapers/background-lightmode-pica.png');
+  --pic:  url('/attachments/wallpapers/background-lightmode-pica.png');
+  --pic2:  url('../attachments/wallpapers/background-lightmode-pica.png');
 }
 .dark-mode {
   --primary-color1: #000f22;

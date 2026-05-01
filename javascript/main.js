@@ -1,14 +1,5 @@
-// ==========================
-// 📱 MENU
-// ==========================
-function openMenu() {
-    const menu = document.querySelector("ul");
-    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
-}
 
-// ==========================
-// 💬 FEEDBACK POPUP
-// ==========================
+
 function openfeedback() {
     document.querySelector(".Feedback-Popup").style.display = "flex";
 }
@@ -17,9 +8,7 @@ function closefeedback() {
     document.querySelector(".Feedback-Popup").style.display = "none";
 }
 
-// ==========================
-// 🌙 DARK MODE (LOCAL STORAGE)
-// ==========================
+
 const darkIcons = document.querySelectorAll(".darkMode");
 const lightIcons = document.querySelectorAll(".lightMode");
 
@@ -93,6 +82,9 @@ const bookingHTML = `
                 <option value="1">1 Day</option>
                 <option value="7">1 Week</option>
                 <option value="30">1 Month</option>
+                <option value="60">2 Month</option>
+                <option value="180">6 Month</option>
+                <option value="360">1 Year</option>
             </select>
 
             <label>
@@ -152,7 +144,7 @@ function initBookingForm() {
             }
 
             if (!/^[0-9]{10,15}$/.test(phone)) {
-                error.innerText = "Phone must be 10–15 digits";
+                error.innerText = "Phone must be 10-15 digits";
                 return;
             }
 

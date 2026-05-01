@@ -3,96 +3,133 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="../css/bootstrap/bootstrap-icons.css">
+        <link rel="stylesheet" href="../css/main.css">
         <link rel="stylesheet" href="../css/cars-style.css">
+        <title>Document</title>
     </head>
     <body>
-        <!-- Start of Sports -->
-        <div id="sport">
-            <div class="right-h1-left">
-                <button id="right-btn">►</button>
-                <h1 id="h1-car-types">Sport cars section</h1>
-                <button id="left-btn">◀</button>
+
+        <!-- Header -->
+        <header>
+            <div class="container">
+        
+        
+                <!-- when screen width = 900px , Menu ☰ appears with [div.header-container] with their changes -->
+                <button id="menu-btn" class="reveal">☰</button>
+                <div>
+                    <img class="reveal car car-on" src="../attachments/wallpapers/header-logo2.png" alt=""
+                        onclick="window.location.href='#Home'">
+                    <img class="reveal car car-off" src="../attachments/wallpapers/header-logo1.png" alt="">
+                </div>
+                <ul>
+                    <li class="reveal"><a href="../index.html#Home" id="delayed-link" target="_self" draggable="false"
+                            title="Sign in or create a new account">Home</a></li>
+                    <li class="reveal"><a href="../index.html#About" id="delayed-link" target="_self" draggable="false"
+                            title="Learn more about us">About Us</a></li>
+                    <li class="reveal"><a href="../index.html#cars-pages" id="delayed-link" target="_self" draggable="false"
+                            title="Learn more about us">Cars</a></li>
+                    <li class="reveal"><a href="../index.html#contact" id="delayed-link" target="_self" draggable="false"
+                            title="Contact us via our Social Media accounts">Contact Us</a></li>
+                    <li class="reveal"><a href="../html/eco-cars.html" id="delayed-link" target="_self" draggable="false"
+                            title="Sign in or create a new account">Eco</a></li>
+                </ul>
+        
+                <a href="html/register.html" class="btn btn-light mx-1 loginBtn reveal" target="_self" draggable="false"
+                    title="Sign in or create a new account">Sign In</a>
+                <div class="theme">
+                    <i class="bi bi-sun-fill lightMode theme-icon" onclick="changeColorMode()"></i>
+                    <i class="bi bi-moon-fill darkMode theme-icon" onclick="changeColorMode()"></i>
+                </div>
             </div>
-            <div class="for-flex">
-                <div id="car">
+        </header>
+        <!-- Start of Sports -->
+        <div class="car-section" id="sport">
+            <div class="right-h1-left">
+                <a id="right-btn" href="SUV-cars.html">◀</a>
+                <h1 id="h1-car-types">Sport cars section</h1>
+                <a id="left-btn" href="truck-cars.html">►</a>
+            </div>
+            <div class="container">
+                <div class="car">
                     <h3 class="brand">Porche</h3>
                     <p class="carmodel">Cayenne 2024</p>
                     <img src="../attachments/cars-pics/sports/1.png" alt="MG ZS">
                     <p>Price: 2899$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Mercedes</h3>
                     <p class="carmodel">G63</p>
                     <img src="../attachments/cars-pics/sports/2.png" alt="MG5">
                     <p>Price: 1199$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Audi</h3>
                     <p class="carmodel">R8</p>
                     <img src="../attachments/cars-pics/sports/3.png" alt="MG ZS">
                     <p>Price: 2899$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Ferrari</h3>
                     <p class="carmodel">488</p>
                     <img src="../attachments/cars-pics/sports/4.png" alt="MG5">
                     <p>Price: 1199$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">BMW</h3>
                     <p class="carmodel">m8</p>
                     <img src="../attachments/cars-pics/sports/5.png" alt="tucson 2008">
                     <p>Price: 699$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">BMW</h3>
                     <p class="carmodel">3 Series</p>
                     <img src="../attachments/cars-pics/sports/6.png" alt="corolla 2022">
                     <p>Price: 599$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Mercedes</h3>
                     <p class="carmodel">C Class</p>
                     <img src="../attachments/cars-pics/sports/7.png" alt="MG ZS">
                     <p>Price: 2899$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Mercedes</h3>
                     <p class="carmodel">GT</p>
                     <img src="../attachments/cars-pics/sports/8.png" alt="MG5">
                     <p>Price: 1199$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Dodge</h3>
                     <p class="carmodel">Charger</p>
                     <img src="../attachments/cars-pics/sports/9.png" alt="MG ZS">
                     <p>Price: 2899$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Dodge</h3>
                     <p class="carmodel">Challenger Hellcat</p>
                     <img src="../attachments/cars-pics/sports/10.png" alt="MG5">
                     <p>Price: 1199$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Ford</h3>
                     <p class="carmodel">Mustang</p>
                     <img src="../attachments/cars-pics/sports/11.png" alt="tucson 2008">
                     <p>Price: 699$</p>
                     <button class="booking-btn">Book Now</button>
                 </div>
-                <div id="car">
+                <div class="car">
                     <h3 class="brand">Chevrolet</h3>
                     <p class="carmodel">Camaro</p>
                     <img src="../attachments/cars-pics/sports/12.png" alt="corolla 2022">
