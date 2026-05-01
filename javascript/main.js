@@ -1,255 +1,269 @@
-// JavaScript Document
-
+// ==========================
+// 📱 MENU
+// ==========================
 function openMenu() {
     const menu = document.querySelector("ul");
-    if (menu.style.display === "flex") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "flex";
-    }
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
 }
 
+// ==========================
+// 💬 FEEDBACK POPUP
+// ==========================
 function openfeedback() {
-    document.getElementsByClassName("Feedback-Popup")[0].style.display = "flex";
+    document.querySelector(".Feedback-Popup").style.display = "flex";
 }
+
 function closefeedback() {
-    document.getElementsByClassName("Feedback-Popup")[0].style.display = "none";
+    document.querySelector(".Feedback-Popup").style.display = "none";
 }
 
-window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-        modal.style.display = "none";
-    }
-});
-
-// change colors
-
-let darkMode = document.querySelectorAll(".darkMode");
-let lightMode = document.querySelectorAll(".lightMode");
+// ==========================
+// 🌙 DARK MODE (LOCAL STORAGE)
+// ==========================
+const darkIcons = document.querySelectorAll(".darkMode");
+const lightIcons = document.querySelectorAll(".lightMode");
 
 function changeColorMode() {
     document.body.classList.toggle("dark-mode");
-    if (document.body.classList.contains("dark-mode")) {
-        localStorage.setItem("mode", "dark");
-        darkMode.forEach((dark) => (dark.style.display = "none"));
-        lightMode.forEach((light) => (light.style.display = "block"));
-    } else {
-        localStorage.setItem("mode", "light");
-        darkMode.forEach((dark) => (dark.style.display = "block"));
-        lightMode.forEach((light) => (light.style.display = "none"));
+
+    const isDark = document.body.classList.contains("dark-mode");
+    localStorage.setItem("mode", isDark ? "dark" : "light");
+
+    darkIcons.forEach(el => el.style.display = isDark ? "none" : "block");
+    lightIcons.forEach(el => el.style.display = isDark ? "block" : "none");
+}
+
+function loadTheme() {
+    const savedMode = localStorage.getItem("mode");
+
+    if (savedMode === "dark") {
+        document.body.classList.add("dark-mode");
+        darkIcons.forEach(el => el.style.display = "none");
+        lightIcons.forEach(el => el.style.display = "block");
     }
 }
-window.onload = function () {
-    if (localStorage.getItem("mode") === "dark") {
-        document.body.classList.add("dark-mode");
-        darkMode.forEach((dark) => (dark.style.display = "none"));
-        lightMode.forEach((light) => (light.style.display = "block"));
-    }
-};
 
-// darkMode.forEach(
-//   btn => {
-//     btn.addEventListener(
-//       "click",
-//       function () {
-//         localStorage.setItem("mode", "dark")
-//       }
-//     )
-//   }
-// )
-// lightMode.forEach(
-//   btn => {
-//     btn.addEventListener(
-//       "click",
-//       function () {
-//         darkMode.forEach(dark => dark.style.display = "block");
-//         lightMode.forEach(light => light.style.display = "none");
-//         document.body.classList.toggle("dark-mode");
-//         localStorage.setItem("mode", "light")
-//       }
-//     )
-//   }
-// )
-
-// darkMode.forEach(
-//   btn => {
-//     btn.addEventListener("click", function () {
-
-    //   color.setProperty("--primary-color1", "#000f22");
-    //   localStorage.setItem("--primary-color1", "#000f22");
-    //   color.setProperty("--primary-color2", "#1b3554");
-    //   localStorage.setItem("--primary-color2", "#1b3554");
-    //   color.setProperty("--primary-color3", "#3f6593");
-    //   localStorage.setItem("--primary-color3", "#3f6593");
-    //   color.setProperty("--primary-color4", "#5b86b8");
-    //   localStorage.setItem("--primary-color4", "#5b86b8");
-    //   color.setProperty("--primary-color5", "#80aad3");
-    //   localStorage.setItem("--primary-color5", "#80aad3");
-    //   color.setProperty("--primary-color6", "#c0e6fd");
-    //   localStorage.setItem("--primary-color6", "#c0e6fd");
-//       document.body.style.setProperty("--pic", "url('../attachments/wallpapers/background-darkmode-pica.png')");
-//       localStorage.setItem("--pic", "url('../attachments/wallpapers/background-darkmode-pica.png')");
-//     });
-//   }
-// )
-// lightMode.forEach(
-//   btn => {
-//     btn.addEventListener("click", function () {
-//       lightMode.forEach(light => light.style.display = "none");
-//       darkMode.forEach(dark => dark.style.display = "block");
-
-//       color.setProperty("--primary-color1", "#c0e6fd");
-//       localStorage.setItem("--primary-color1", "#c0e6fd");
-//       color.setProperty("--primary-color2", "#80aad3");
-//       localStorage.setItem("--primary-color2", "#80aad3");
-//       color.setProperty("--primary-color3", "#5b86b8");
-//       localStorage.setItem("--primary-color3", "#5b86b8");
-//       color.setProperty("--primary-color4", "#3f6593");
-//       localStorage.setItem("--primary-color4", "#3f6593");
-//       color.setProperty("--primary-color5", "#1b3554");
-//       localStorage.setItem("--primary-color5", "#1b3554");
-//       color.setProperty("--primary-color6", "#000f22");
-//       localStorage.setItem("--primary-color6", "#000f22");
-//       document.body.style.setProperty("--pic", "url('../attachments/wallpapers/background-lightmode-pica.png')")
-//       localStorage.setItem("--pic", "url('../attachments/wallpapers/background-lightmode-pica.png')");
-//     });
-//   }
-// )
-
-// if (darkMode && lightMode) {
-//   color.setProperty("--primary-color1", localStorage.getItem("--primary-color1"));
-//   color.setProperty("--primary-color2", localStorage.getItem("--primary-color2"));
-//   color.setProperty("--primary-color3", localStorage.getItem("--primary-color3"));
-//   color.setProperty("--primary-color4", localStorage.getItem("--primary-color4"));
-//   color.setProperty("--primary-color5", localStorage.getItem("--primary-color5"));
-//   color.setProperty("--primary-color6", localStorage.getItem("--primary-color6"));
-//   color.setProperty("--pic", localStorage.getItem("--pic"));
-
-//   if (localStorage.getItem("--primary-color1") === "#000f22") {
-//     darkMode.forEach((dark) => (dark.style.display = "none"));
-//     lightMode.forEach((light) => (light.style.display = "block"));
-//     document.body.style.setProperty("--pic", "url('../attachments/wallpapers/background-darkmode-pica.png')")
-//   } else {
-//     darkMode.forEach((dark) => (dark.style.display = "block"));
-//     lightMode.forEach((light) => (light.style.display = "none"));
-//     document.body.style.setProperty("--pic", "url('../attachments/wallpapers/background-lightmode-pica.png')")
-//   }
-// }
-
-// reveal code for all project
-
-document.addEventListener("DOMContentLoaded", function () {
+// ==========================
+// 🎞️ SCROLL ANIMATION
+// ==========================
+function initReveal() {
     const elements = document.querySelectorAll(".reveal");
 
-    const observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
             if (entry.isIntersecting) {
                 setTimeout(() => {
                     entry.target.classList.add("active");
                 }, 150);
-            } // else {
-            //     entry.target.classList.remove("active");
-            // }
+            }
         });
     });
 
-    elements.forEach(function (el) {
-        observer.observe(el);
-    });
-});
+    elements.forEach(el => observer.observe(el));
+}
 
-let bookNowBtn = document.querySelectorAll(".bookNowBtn");
-let payCloseBtn = document.querySelectorAll(".payCloseBtn");
+// ==========================
+// 🚗 BOOKING POPUP (HTML)
+// ==========================
+const bookingHTML = `
+<div class="pop-up" id="pop-up">
+    <div class="mini-pop-up">
+        <button class="payCloseBtn">&times;</button>
+        <h1>Booking Details</h1>
 
-bookNowBtn.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-        document.getElementById("pop-up").style.display = "flex";
-    });
-});
+        <form id="booking-form" novalidate>
+            <label>Name:</label>
+            <input type="text" id="book-name">
 
-payCloseBtn.forEach(function (btn) {
-    btn.addEventListener("click", function () {
-        document.getElementById("pop-up").style.display = "none";
-    });
-});
+            <label>Email:</label>
+            <input type="email" id="book-email">
 
+            <label>Phone:</label>
+            <input type="tel" id="book-phone">
 
-let bookNowFormByJS = `
-    <div class="pop-up" id="pop-up">
-        <div class="mini-pop-up" id="mini-pop-up">
-            <button class="payCloseBtn" id="payCloseBtn">&times;</button>
-            <h1 id="booking-info">Booking Details</h1>
-            <form id="booking-form" action="">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" name="phone" required>
-                <label for="car-colour">Car Colour:</label>
-                <select name="choose-colour" id="choose-colour" onchange="changeColor(this)">
-                    <option value="white">White</option>
-                    <option value="gray">Gray</option>
-                    <option value="silver">Silver</option>
-                    <option value="brown">Brown</option>
-                    <option value="beige">Beige</option>
-                    <option value="orange">Orange</option>
-                    <option value="purple">Purple</option>
-                    <option value="pink">Pink</option>
-                    <option value="maroon">Maroon</option>
-                    <option value="navy">Navy</option>
-                    <option value="olive">Olive</option>
-                    <option value="teal">Teal</option>
-                    <option value="aqua">Aqua</option>
-                    <option value="lime">Lime</option>
-                    <option value="cyan">Cyan</option>
-                    <option value="magenta">Magenta</option>
-                    <option value="violet">Violet</option>
-                    <option value="gold">Gold</option>
-                    <option value="orchid">Orchid</option>
-                    <option value="crimson">Crimson</option>
-                    <option value="indigo">Indigo</option>
-                    <option value="tan">Tan</option>
-                    <option value="black">Black</option>
-                    <option value="blue">Blue</option>
-                    <option value="red">Red</option>
-                    <option value="yellow">Yellow</option>
-                    <option value="green">Green</option>
-                </select>
-                <label for="time">Rental period:</label>
-                <select name="rental-period" id="rental-period">
-                    <option value="1">1 Day</option>
-                    <option value="2">2 Days</option>
-                    <option value="3">3 Days</option>
-                    <option value="7">1 Week</option>
-                    <option value="14">2 Weeks</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Months</option>
-                    <option value="90">3 Months</option>
-                    <option value="180">6 Months</option>
-                    <option value="365">1 Year</option>
-                </select>
-                <h3 id="booking-question">Do you want to get the car by delivery to your home?</h3>
-                <input type="checkbox" id="delivery" name="delivery">
-                <button type="submit">Book Now</button>
-            </form>
-            <div>
-                <img src="../attachments/mastercard-7c511229.png" alt="">
-                <img src="../attachments/miza.dfc41445.svg" alt="">
-            </div>
-        </div>
+            <label>Car Colour:</label>
+            <select id="choose-colour">
+                <option value="white">White</option>
+                <option value="black">Black</option>
+                <option value="red">Red</option>
+            </select>
+
+            <label>Rental period:</label>
+            <select id="rental-period">
+                <option value="1">1 Day</option>
+                <option value="7">1 Week</option>
+                <option value="30">1 Month</option>
+            </select>
+
+            <label>
+                <input type="checkbox" id="delivery"> Delivery to home
+            </label>
+
+            <p id="booking-error" style="color:red;"></p>
+
+            <button type="submit">Book Now</button>
+        </form>
     </div>
+</div>
 `;
 
-document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("bookNowFormByJS").innerHTML = bookNowFormByJS;
-});
-window.onload = function () {
-    document.getElementById("bookNowFormByJS").innerHTML = bookNowFormByJS;
-};
+// ==========================
+// 🚗 OPEN / CLOSE BOOKING
+// ==========================
+function initBookingButtons() {
+    document.addEventListener("click", (e) => {
 
-document.addEventListener("click", function (e) {
-    if (e.target.classList.contains("payCloseBtn")) {
-        document.getElementById("pop-up").style.display = "none";
+        if (e.target.classList.contains("bookNowBtn")) {
+            document.getElementById("pop-up").style.display = "flex";
+        }
+
+        if (e.target.classList.contains("payCloseBtn")) {
+            document.getElementById("pop-up").style.display = "none";
+        }
+    });
+}
+
+// ==========================
+// ✅ CUSTOM VALIDATION + SAVE
+// ==========================
+function initBookingForm() {
+    document.addEventListener("submit", (e) => {
+
+        if (e.target.id === "booking-form") {
+            e.preventDefault();
+
+            const name = document.getElementById("book-name").value.trim();
+            const email = document.getElementById("book-email").value.trim();
+            const phone = document.getElementById("book-phone").value.trim();
+            const error = document.getElementById("booking-error");
+
+            error.innerText = "";
+
+            // validation
+            if (name.length < 3) {
+                error.innerText = "Name must be at least 3 characters";
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                error.innerText = "Invalid email";
+                return;
+            }
+
+            if (!/^[0-9]{10,15}$/.test(phone)) {
+                error.innerText = "Phone must be 10–15 digits";
+                return;
+            }
+
+            // save
+            const bookingData = {
+                name,
+                email,
+                phone,
+                color: document.getElementById("choose-colour").value,
+                period: document.getElementById("rental-period").value,
+                delivery: document.getElementById("delivery").checked
+            };
+
+            localStorage.setItem("booking", JSON.stringify(bookingData));
+
+            error.style.color = "green";
+            error.innerText = "Booking saved!";
+        }
+    });
+}
+
+// ==========================
+// 🔄 LOAD SAVED DATA
+// ==========================
+function loadBookingData() {
+    const saved = JSON.parse(localStorage.getItem("booking"));
+
+    if (saved) {
+        console.log("Saved booking:", saved);
+    }
+}
+
+// ==========================
+// 🔍 SESSION STORAGE (SEARCH)
+// ==========================
+function initSearchStorage() {
+    const search = document.querySelector("input[name='Search']");
+
+    if (!search) return;
+
+    search.addEventListener("input", () => {
+        sessionStorage.setItem("search", search.value);
+    });
+
+    const saved = sessionStorage.getItem("search");
+    if (saved) search.value = saved;
+}
+
+// ==========================
+// 🚀 INIT EVERYTHING
+// ==========================
+document.addEventListener("DOMContentLoaded", () => {
+
+    // inject booking popup
+    const container = document.getElementById("bookNowFormByJS");
+    if (container) container.innerHTML = bookingHTML;
+
+    loadTheme();
+    initReveal();
+    initBookingButtons();
+    initBookingForm();
+    loadBookingData();
+    initSearchStorage();
+});
+// ==========================
+// 🔐 LOGIN FORM (LOCAL STORAGE)
+// ==========================
+
+document.addEventListener("submit", function (e) {
+    if (e.target.id === "loginForm") {
+        e.preventDefault();
+
+        let email = document.querySelector("input[name='email']").value;
+        let password = document.querySelector("input[name='password']").value;
+
+        let savedUser = JSON.parse(localStorage.getItem("user"));
+
+        if (!savedUser) {
+            alert("No account found. Please register first.");
+            return;
+        }
+
+        if (email === savedUser.email && password === savedUser.password) {
+            alert("Login successful!");
+            window.location.href = "../index.html";
+        } else {
+            alert("Invalid email or password");
+        }
+    }
+});
+
+// ==========================
+// 📝 REGISTRATION FORM (LOCAL STORAGE)
+// ==========================
+document.addEventListener("submit", function (e) {
+    if (e.target.closest("form") && e.target.querySelector("input[type='password']")) {
+        e.preventDefault();
+
+        let name = document.querySelector("input[name='name']").value;
+        let email = document.querySelector("input[name='email']").value;
+        let password = document.querySelector("input[name='password']").value;
+
+        let user = {
+            name,
+            email,
+            password
+        };
+
+        localStorage.setItem("user", JSON.stringify(user));
+
+        alert("Account created!");
+        window.location.href = "login.html";
     }
 });

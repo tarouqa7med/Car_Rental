@@ -15,7 +15,7 @@
         <link rel="icon"       href="attachments/wallpapers/page-logo.png">
     </head>
     <body id="Home">
-
+    <div id="bookNowFormByJS"></div>
         <!-- Header -->
         <header>
             <div class="container">
@@ -191,13 +191,13 @@
                 </div>
                 <form action="" method="">
                     <div style="display: flex; gap: 10px;">
-                        <input type="text" name="name" class="form-control my-2 reveal" placeholder="Name" required>
-                        <input type="email" name="email" class="form-control my-2 reveal" inputmode="email" placeholder="Email" required>
+                        <input type="text" id="name" name="name" class="form-control my-2 reveal" placeholder="Name" required>
+                        <input type="email" id="email" name="email" class="form-control my-2 reveal" inputmode="email" placeholder="Email" required>
                     </div>
-                    <textarea name="message" class="reveal" id="message" placeholder="Message. . ." required></textarea>
+                    <textarea name="message" id="message" class="reveal" placeholder="Message. . ." required></textarea>
                     <button class="btn btn-success w-100 reveal" type="submit">Submit</button>
                 </form>
-                <p id="msg" class="text-center mt-3 reveal"></p>
+                <p id="msg" class="text-center mt-3 reveal" style="color: red;"></p>
             </div>
         </section>
         
