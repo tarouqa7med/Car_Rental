@@ -148,17 +148,21 @@ function initBookingForm() {
                 return;
             }
 
-            // save
+            // Save booking
             const bookingData = {
                 name,
                 email,
                 phone,
                 color: document.getElementById("choose-colour").value,
                 period: document.getElementById("rental-period").value,
-                delivery: document.getElementById("delivery").checked
+                delivery: document.getElementById("delivery").checked,
+                createdAt: new Date().toISOString()
             };
 
-            localStorage.setItem("booking", JSON.stringify(bookingData));
+            // Get existing bookings and add new one
+            const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
+            bookings.push(bookingData);
+            localStorage.setItem("bookings", JSON.stringify(bookings));
 
             error.style.color = "green";
             error.innerText = "Booking saved!";
@@ -167,13 +171,13 @@ function initBookingForm() {
 }
 
 // ==========================
-// 🔄 LOAD SAVED DATA
+// 🔄 LOAD SAVED BOOKINGS
 // ==========================
 function loadBookingData() {
-    const saved = JSON.parse(localStorage.getItem("booking"));
+    const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
 
-    if (saved) {
-        console.log("Saved booking:", saved);
+    if (bookings && bookings.length > 0) {
+        console.log("Saved bookings:", bookings);
     }
 }
 
@@ -245,7 +249,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ==========================
-// 🔐 DATABASE HELPERS
+// 🔐 LOCAL STORAGE HELPERS
 // ==========================
 
 function getUsersDB() {
@@ -259,7 +263,7 @@ function saveUsersDB(users) {
 
 function findUserByEmail(email) {
     const users = getUsersDB();
-    return users.find(user => user.email.toLowerCase() === email.toLowerCase());
+    return users.find(user => user.email && user.email.toLowerCase() === email.toLowerCase());
 }
 
 function emailExists(email) {
