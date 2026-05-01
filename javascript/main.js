@@ -210,6 +210,63 @@ document.addEventListener("DOMContentLoaded", () => {
     initSearchStorage();
 });
 // ==========================
+// 🔐 SIGN IN / SIGN OUT BUTTON
+// ==========================
+
+function updateAuthButton() {
+    const authBtn = document.getElementById("authBtn");
+    if (!authBtn) return;
+
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    
+    if (loggedInUser) {
+        const user = JSON.parse(loggedInUser);
+        authBtn.innerHTML = "Sign Out";
+        authBtn.onclick = signOut;
+        authBtn.title = "Sign out from your account";
+    } else {
+        authBtn.innerHTML = "Sign In";
+        authBtn.onclick = null;
+        authBtn.href = "html/register.html";
+        authBtn.title = "Sign in or create a new account";
+    }
+}
+
+function signOut() {
+    localStorage.removeItem("loggedInUser");
+    alert("You have been signed out!");
+    // Go to index.html at root level
+    window.location.href = window.location.origin + "/index.html";
+}
+
+// Initialize auth button on page load
+document.addEventListener("DOMContentLoaded", () => {
+    updateAuthButton();
+});
+
+// ==========================
+// 🔐 DATABASE HELPERS
+// ==========================
+
+function getUsersDB() {
+    const users = localStorage.getItem("usersDB");
+    return users ? JSON.parse(users) : [];
+}
+
+function saveUsersDB(users) {
+    localStorage.setItem("usersDB", JSON.stringify(users));
+}
+
+function findUserByEmail(email) {
+    const users = getUsersDB();
+    return users.find(user => user.email.toLowerCase() === email.toLowerCase());
+}
+
+function emailExists(email) {
+    return findUserByEmail(email) !== undefined;
+}
+
+// ==========================
 // 🔐 LOGIN FORM (LOCAL STORAGE)
 // ==========================
 
@@ -217,22 +274,46 @@ document.addEventListener("submit", function (e) {
     if (e.target.id === "loginForm") {
         e.preventDefault();
 
-        let email = document.querySelector("input[name='email']").value;
+        let email = document.querySelector("input[name='email']").value.trim();
         let password = document.querySelector("input[name='password']").value;
 
-        let savedUser = JSON.parse(localStorage.getItem("user"));
+        // Get or create error message element
+        let errorMsg = document.getElementById("login-error");
+        if (!errorMsg) {
+            errorMsg = document.createElement("p");
+            errorMsg.id = "login-error";
+            errorMsg.style.color = "red";
+            errorMsg.style.textAlign = "center";
+            errorMsg.style.marginTop = "10px";
+            e.target.appendChild(errorMsg);
+        }
+        errorMsg.innerText = "";
+        errorMsg.style.color = "red";
 
-        if (!savedUser) {
-            alert("No account found. Please register first.");
+        // Check if user exists
+        const user = findUserByEmail(email);
+
+        if (!user) {
+            errorMsg.innerText = "User not found. Please register first.";
             return;
         }
 
-        if (email === savedUser.email && password === savedUser.password) {
-            alert("Login successful!");
-            window.location.href = "../index.html";
-        } else {
-            alert("Invalid email or password");
+        // Check if password matches
+        if (password !== user.password) {
+            errorMsg.innerText = "Incorrect password";
+            return;
         }
+
+        // Login successful
+        errorMsg.style.color = "green";
+        errorMsg.innerText = "Login successful!";
+        
+        // Store current logged in user
+        localStorage.setItem("loggedInUser", JSON.stringify(user));
+        
+        setTimeout(() => {
+            window.location.href = "../index.html";
+        }, 1000);
     }
 });
 
@@ -243,19 +324,59 @@ document.addEventListener("submit", function (e) {
     if (e.target.closest("form") && e.target.querySelector("input[type='password']")) {
         e.preventDefault();
 
-        let name = document.querySelector("input[name='name']").value;
-        let email = document.querySelector("input[name='email']").value;
+        let name = document.querySelector("input[name='name']").value.trim();
+        let email = document.querySelector("input[name='email']").value.trim();
         let password = document.querySelector("input[name='password']").value;
 
+        // Get or create error message element
+        let errorMsg = document.getElementById("register-error");
+        if (!errorMsg) {
+            errorMsg = document.createElement("p");
+            errorMsg.id = "register-error";
+            errorMsg.style.color = "red";
+            errorMsg.style.textAlign = "center";
+            errorMsg.style.marginTop = "10px";
+            e.target.appendChild(errorMsg);
+        }
+        errorMsg.innerText = "";
+        errorMsg.style.color = "red";
+
+        // Check if email already exists
+        if (emailExists(email)) {
+            errorMsg.innerText = "Email already registered. Please login.";
+            return;
+        }
+
+        // Validate inputs
+        if (name.length < 3) {
+            errorMsg.innerText = "Name must be at least 3 characters";
+            return;
+        }
+
+        if (password.length < 6) {
+            errorMsg.innerText = "Password must be at least 6 characters";
+            return;
+        }
+
+        // Create new user
         let user = {
             name,
             email,
-            password
+            password,
+            createdAt: new Date().toISOString()
         };
 
-        localStorage.setItem("user", JSON.stringify(user));
+        // Add to users database
+        const users = getUsersDB();
+        users.push(user);
+        saveUsersDB(users);
 
-        alert("Account created!");
-        window.location.href = "login.html";
+        // Success
+        errorMsg.style.color = "green";
+        errorMsg.innerText = "Account created! Redirecting...";
+        
+        setTimeout(() => {
+            window.location.href = "login.html";
+        }, 1500);
     }
 });
