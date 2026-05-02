@@ -67,6 +67,61 @@ body::before {
   background-size: cover;
   transition: all 200ms 0s linear;
 }
+.arrow-return {
+  padding-top: 100px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bolder !important;
+  line-height: 0;
+  vertical-align: 0;
+  background: var(--primary-color5);
+  color: var(--primary-color1);
+  border: none;
+  border-left: 2px solid var(--primary-color2);
+  animation: arrow-up 300ms forwards ease;
+  cursor: pointer;
+  transition: 1s;
+  z-index: 999;
+}
+.arrow-return2 {
+  position: fixed;
+  bottom: 30px;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  line-height: 0;
+  vertical-align: 0;
+  background: var(--primary-color5);
+  color: var(--primary-color1);
+  border: 1px solid var(--primary-color6);
+  border-radius: 50%;
+  animation: arrow-up 300ms forwards ease;
+  cursor: pointer;
+  transition: 1s;
+  z-index: 999;
+}
+.arrow-return:hover,
+.arrow-return2:hover {
+  background: var(--primary-color4);
+  box-shadow: 0 0 0 5px var(--primary-color3);
+  transition: 150ms;
+}
+.arrow-return:active,
+.arrow-return2:active {
+  background: var(--primary-color6);
+  transform: scale(0.85);
+}
 
 /*  CSS for index.html */
 

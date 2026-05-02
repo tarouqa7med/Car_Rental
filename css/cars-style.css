@@ -28,6 +28,7 @@ header {
 }
 .car-section .right-h1-left {
   padding: 20px;
+  padding-left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +63,8 @@ header {
   transform: scale(0.95);
 }
 .car-section .container {
-  padding: 20px;
+  padding: 20px 50px;
+  padding-left: 0;
   height: 100%;
   max-width: 100%;
   display: flex;
