@@ -177,7 +177,7 @@ ul li {
   box-shadow: 0 0 0 2px var(--primary-color3);
   padding: 10px 20px;
   border-radius: 35px;
-  width: 100px;
+  width: auto;
   transition: all 200ms 100ms linear;
 }
 .container .loginBtn:hover {
