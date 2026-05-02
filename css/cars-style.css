@@ -1,10 +1,5 @@
 /* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
-}
+
 body::before {
   position: fixed;
   top: 0;
@@ -18,19 +13,25 @@ body::before {
   transition: all 200ms 0s linear;
   z-index: -1;
 }
-
 header {
   position: sticky;
+  
 }
 
-/* Section Title + Buttons */
-.right-h1-left {
+/* Cars Container */
+
+.car-section  {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.car-section .right-h1-left {
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
-  margin-bottom: 30px;
   background: var(--primary-color3);
 }
 .right-h1-left a {
@@ -40,9 +41,8 @@ header {
   font-size: 2rem;
   text-align: center;
   color: var(--primary-color6);
-  padding: 0 75px;
+  width: 35%;
 }
-
 #right-btn, #left-btn {
   background: var(--primary-color6);
   color: var(--primary-color1);
@@ -53,7 +53,6 @@ header {
   cursor: pointer;
   transition: 0.3s;
 }
-
 #right-btn:hover, #left-btn:hover {
   background: var(--primary-color5);
   transform: scale(1.1);
@@ -62,81 +61,74 @@ header {
   background: var(--primary-color4);
   transform: scale(0.95);
 }
-
-/* Cars Container */
-
-.car-section  {
-  background-color: blue ;
-  height: 500px;
-  padding: 30px;
-}
-.container {
-  border-collapse: red;
-  gap: 20px;
+.car-section .container {
+  padding: 20px;
+  height: 100%;
+  max-width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 20px;
+  background-color: #00000080;
 }
 
 /* Each Car Card */
-.car {
-  background-color: red;
+.car-card {
+  width: 350px;
+  backdrop-filter: blur(30px);
+  background: color-mix(in srgb, var(--primary-color2) 60%, transparent) !important;
+  color: var(--primary-color6);
   border-radius: 15px;
+  box-shadow: 0 0 20px var(--primary-color6) inset;
   padding: 15px;
   text-align: center;
   transition: 0.3s;
   backdrop-filter: blur(10px);
 }
-
-/* Hover effect */
-.car:hover {
+.car-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  box-shadow: 0 0 10px var(--primary-color6) inset,
+              0 0 0 10px #c0e6fd;
 }
 
-/* Brand */
 .brand {
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
+  color: var(--primary-color6);
+}
+.car-model {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: #4da6ff;
+  color: var(--primary-color5);
 }
-/* Model */
-.carmodel {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #6098d0;
-}
-
-/* Image */
-.car img {
+.car-card img {
   width: 100%;
   height: 150px;
   object-fit: contain;
   margin-bottom: 10px;
+  filter: drop-shadow(0 0 25px var(--primary-color6));
 }
-
-/* Price */
-.car p {
-  margin: 8px 0;
+.car-card p {
+  margin-top: -20px;
 }
-
-/* Button */
 .booking-btn {
-  background: #4da6ff;
+  background: var(--primary-color2);
+  color: var(--primary-color6);
   border: none;
   padding: 10px 15px;
   border-radius: 10px;
   cursor: pointer;
-  color: white;
   transition: 0.3s;
 }
-
 .booking-btn:hover {
-  background: #1a8cff;
+  background: var(--primary-color5);
+  color: var(--primary-color1);
   transform: scale(1.05);
 }
-
-
-img {
-  width: 250px;
-  height: 150px;
+.booking-btn:active {
+  background: var(--primary-color4);
+  color: var(--primary-color1);
+  transform: scale(0.95);
 }
