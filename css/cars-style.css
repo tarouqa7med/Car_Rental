@@ -113,7 +113,7 @@ header {
 .car-card p {
   margin-top: -20px;
 }
-.booking-btn {
+.bookNowBtn {
   background: var(--primary-color2);
   color: var(--primary-color6);
   border: none;
@@ -122,12 +122,12 @@ header {
   cursor: pointer;
   transition: 0.3s;
 }
-.booking-btn:hover {
+.bookNowBtn:hover {
   background: var(--primary-color5);
   color: var(--primary-color1);
   transform: scale(1.05);
 }
-.booking-btn:active {
+.bookNowBtn:active {
   background: var(--primary-color4);
   color: var(--primary-color1);
   transform: scale(0.95);

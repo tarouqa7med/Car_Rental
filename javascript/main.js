@@ -104,16 +104,19 @@ const bookingHTML = `
 // ==========================
 function initBookingButtons() {
     document.addEventListener("click", (e) => {
-
-        if (e.target.classList.contains("bookNowBtn")) {
-            document.getElementById("pop-up").style.display = "flex";
+        if (e.target.closest(".bookNowBtn")) {
+            let popup = document.getElementById("pop-up");
+            if (popup) popup.style.display = "flex";
         }
 
-        if (e.target.classList.contains("payCloseBtn")) {
-            document.getElementById("pop-up").style.display = "none";
+        if (e.target.closest(".payCloseBtn")) {
+            let popup = document.getElementById("pop-up");
+            if (popup) popup.style.display = "none";
         }
     });
 }
+
+initBookingButtons();
 
 // ==========================
 // ✅ CUSTOM VALIDATION + SAVE
