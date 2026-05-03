@@ -218,7 +218,6 @@ function updateAuthButton() {
     } else {
         authBtn.innerHTML = "Sign In";
         authBtn.onclick = null;
-        authBtn.href = "html/register.html";
         authBtn.title = "Sign in or create a new account";
     }
 }
