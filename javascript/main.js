@@ -32,9 +32,7 @@ function loadTheme() {
     }
 }
 
-// ==========================
-// 🎞️ SCROLL ANIMATION
-// ==========================
+
 function initReveal() {
     const elements = document.querySelectorAll(".reveal");
 
@@ -51,9 +49,7 @@ function initReveal() {
     elements.forEach(el => observer.observe(el));
 }
 
-// ==========================
-// 🚗 BOOKING POPUP (HTML)
-// ==========================
+
 const bookingHTML = `
 <div class="pop-up" id="pop-up">
     <div class="mini-pop-up">
@@ -99,9 +95,7 @@ const bookingHTML = `
 </div>
 `;
 
-// ==========================
-// 🚗 OPEN / CLOSE BOOKING
-// ==========================
+
 function initBookingButtons() {
     document.addEventListener("click", (e) => {
         if (e.target.closest(".bookNowBtn")) {
@@ -118,9 +112,7 @@ function initBookingButtons() {
 
 initBookingButtons();
 
-// ==========================
-// ✅ CUSTOM VALIDATION + SAVE
-// ==========================
+
 function initBookingForm() {
     document.addEventListener("submit", (e) => {
 
@@ -173,9 +165,7 @@ function initBookingForm() {
     });
 }
 
-// ==========================
-// 🔄 LOAD SAVED BOOKINGS
-// ==========================
+
 function loadBookingData() {
     const bookings = JSON.parse(localStorage.getItem("bookings") || "[]");
 
@@ -184,9 +174,7 @@ function loadBookingData() {
     }
 }
 
-// ==========================
-// 🔍 SESSION STORAGE (SEARCH)
-// ==========================
+
 function initSearchStorage() {
     const search = document.querySelector("input[name='Search']");
 
@@ -200,9 +188,7 @@ function initSearchStorage() {
     if (saved) search.value = saved;
 }
 
-// ==========================
-// 🚀 INIT EVERYTHING
-// ==========================
+
 document.addEventListener("DOMContentLoaded", () => {
 
     // inject booking popup
@@ -216,9 +202,7 @@ document.addEventListener("DOMContentLoaded", () => {
     loadBookingData();
     initSearchStorage();
 });
-// ==========================
-// 🔐 SIGN IN / SIGN OUT BUTTON
-// ==========================
+
 
 function updateAuthButton() {
     const authBtn = document.getElementById("authBtn");
@@ -251,9 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
     updateAuthButton();
 });
 
-// ==========================
-// 🔐 LOCAL STORAGE HELPERS
-// ==========================
 
 function getUsersDB() {
     const users = localStorage.getItem("usersDB");
@@ -273,9 +254,6 @@ function emailExists(email) {
     return findUserByEmail(email) !== undefined;
 }
 
-// ==========================
-// 🔐 LOGIN FORM (LOCAL STORAGE)
-// ==========================
 
 document.addEventListener("submit", function (e) {
     if (e.target.id === "loginForm") {
@@ -305,7 +283,7 @@ document.addEventListener("submit", function (e) {
             return;
         }
 
-        // Check if password matches
+        
         if (password !== user.password) {
             errorMsg.innerText = "Incorrect password";
             return;
@@ -324,9 +302,7 @@ document.addEventListener("submit", function (e) {
     }
 });
 
-// ==========================
-// 📝 REGISTRATION FORM (LOCAL STORAGE)
-// ==========================
+
 document.addEventListener("submit", function (e) {
     if (e.target.closest("form") && e.target.querySelector("input[type='password']")) {
         e.preventDefault();
