@@ -59,15 +59,8 @@ const bookingHTML = `
                     <option value="black">Black</option>
                     <option value="red">Red</option>
                 </select>
-                <label>Rental period:</label>
-                <select id="rental-period">
-                    <option value="1">1 Day</option>
-                    <option value="7">1 Week</option>
-                    <option value="30">1 Month</option>
-                    <option value="60">2 Month</option>
-                    <option value="180">6 Month</option>
-                    <option value="360">1 Year</option>
-                </select>
+                <label>Test Date:</label>
+                <input type="date" id="test-date">
                 <label>
                     <input type="checkbox" id="delivery"> Delivery to home
                 </label>
